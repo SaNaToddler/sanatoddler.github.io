@@ -1,7 +1,7 @@
 (() => {
   const button=document.getElementById('share-app');
   if(!button)return;
-  const url='https://kidsmathsmatrixpuzzle.github.io/toddler-games-/index.html';
+  const url='https://sanatoddler.github.io/';
   const whatsapp=new URL('https://wa.me/');
   whatsapp.searchParams.set('text',url);
   function nativeShareData(){

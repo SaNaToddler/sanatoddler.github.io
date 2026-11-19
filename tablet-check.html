@@ -20,7 +20,7 @@
 </dl>
 <small id="browser"></small>
 <button id="retry" type="button">Check again</button>
-<a href="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/v1.99.html">Open v1.99</a>
+<a href="https://sanatoddler.github.io/v1.99.html">Open v1.99</a>
 <small>This page only checks. It does not install, remove or change saved pictures or game settings. Send a screenshot of these results.</small>
 <noscript>JavaScript is disabled. Enable JavaScript in this browser to check and update SaNa.</noscript>
 </main>
@@ -51,7 +51,7 @@
       field('network').textContent='HTTP '+response.status;
       if(!response.ok){field('release').textContent='Could not check';return false;}
       const source=await timed(response.text(),3000);
-      const match=source.match(/sana-little-hands-live-v(\d+)([^'"\s;]*)/);
+      const match=source.match(/sana-toddler-public-v(\d+)([^'"\s;]*)/);
       if(!match){field('network').textContent+=' - unexpected response';field('release').textContent='Could not verify';return false;}
       field('release').textContent='v'+(Number(match[1])/100).toFixed(2)+match[2];
       return true;

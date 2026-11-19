@@ -1,9 +1,9 @@
-# SaNa Little Hands
+# SaNaToddler
 
-Toddler games for ages 2–5.
+Toddler games for ages 2–5. The approved public Main app is published from this repository at **https://sanatoddler.github.io/** once GitHub Pages is enabled.
 
-This repository holds approved public releases.
-Changes are tested in the separate Beta app before publishing here.
+Open the link in your browser, install the app if offered, then tap to play. The installed app is named **SaNaToddler**, with the green puppy icon.
 
-Beta app:
-https://grajapm-hue.github.io/toddler-games-/beta/index.html
+This independent website preserves approved Main v1.99. Development and Beta testing happen separately. Existing MathMatrix and previous toddler websites are not changed by this repository.
+
+Release provenance and local verification are recorded in [PUBLIC-SITE-RELEASE.md](PUBLIC-SITE-RELEASE.md).
