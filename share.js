@@ -1,7 +1,7 @@
 (() => {
   const button=document.getElementById('share-app');
   if(!button)return;
-  const url='https://sanatoddler.github.io/';
+  const url='https://sanatoddler.github.io/index.html';
   const whatsapp=new URL('https://wa.me/');
   whatsapp.searchParams.set('text',url);
   function nativeShareData(){
