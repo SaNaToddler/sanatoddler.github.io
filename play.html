@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#d9eff1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>SaNaToddler · Play</title>
+<meta name="description" content="Tap puppy → Open in browser → Install → Accept. If asked to scan, accept and wait, then proceed. Tap to play.">
+<link rel="canonical" href="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SaNaToddler">
+<meta property="og:title" content="SaNaToddler">
+<meta property="og:description" content="Tap puppy → Open in browser → Install → Accept. If asked to scan, accept and wait, then proceed. Tap to play.">
+<meta property="og:url" content="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/index.html">
+<meta property="og:image" content="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/sana-puppy-green-r2-v199-512.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="SaNa the puppy with a pink and blue bow, the Little Hands app mascot.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SaNaToddler">
+<meta name="twitter:description" content="Tap puppy → Open in browser → Install → Accept. If asked to scan, accept and wait, then proceed. Tap to play.">
+<meta name="twitter:image" content="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/sana-puppy-green-r2-v199-512.png">
+<meta name="twitter:image:alt" content="SaNa the puppy with a pink and blue bow, the Little Hands app mascot.">
+<link rel="stylesheet" href="picture-puzzle.css">
+<link rel="icon" href="sana-puppy-green-r2-v199-192.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="sana-puppy-green-r2-v199-192.png">
+<style>
+:root{color-scheme:light;--ink:#173e35;--quiet:#173e35;--paper:#fffaf0;--mint:#bbe5c4;--green:#287c60;--blue:#347f9d;--peach:#f0ac90;--yellow:#ffe17a;--line:#d9ccb0;--shadow:#cfbea0;font-family:"Trebuchet MS","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:#e9dfcd;color:var(--ink)}button{font:inherit;cursor:pointer;touch-action:manipulation;color:inherit}button,svg{-webkit-user-select:none;user-select:none}button:focus-visible,[tabindex]:focus-visible{outline:4px solid #215e97;outline-offset:3px}[hidden]{display:none!important}
+#app,#app *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none}
+#viewport{--device-safe-top:env(safe-area-inset-top,0px);--device-safe-right:env(safe-area-inset-right,0px);--device-safe-bottom:env(safe-area-inset-bottom,0px);--device-safe-left:env(safe-area-inset-left,0px);--play-edge-x:64px;--play-edge-y:0px;position:fixed;inset:0;overflow:hidden;background:#000;padding:max(var(--play-edge-y),var(--device-safe-top)) var(--device-safe-right) var(--device-safe-bottom) max(var(--play-edge-x),var(--device-safe-left))}
+@media(orientation:portrait){#viewport{--play-edge-x:0px;--play-edge-y:64px}}
+#app{position:absolute;left:50%;top:50%;width:var(--frame-w,100vw);height:var(--frame-h,100dvh);transform:translate(-50%,-50%);transform-origin:center;background:var(--paper);border:2px solid #d5c6aa;border-radius:18px;box-shadow:none;display:grid;grid-template-rows:64px auto minmax(0,1fr);overflow:hidden}
+#app.rotated{transform:translate(-50%,-50%) rotate(90deg)}
+.topbar{display:flex;align-items:center;gap:10px;padding:5px 12px;border-bottom:1px solid #93b9ad;background:#d9eff1;z-index:2}.brand{display:flex;align-items:center;gap:10px;margin-right:auto}.brand-mark{width:42px;height:42px}.wordmark{font-size:28px;font-weight:900;letter-spacing:-1px;line-height:1}.brand small{display:block;font-size:12px;letter-spacing:1px;text-transform:uppercase;font-weight:900;color:var(--ink);margin-top:3px}.icon-button{border:1px solid #d9cdb5;border-radius:15px;background:#ffe17a;box-shadow:0 3px 0 #dfd3bb;min-width:46px;height:44px;display:grid;place-items:center;padding:9px;border-color:#a89a62}.icon-button svg{width:24px;height:24px}.icon-button[aria-pressed="true"]{background:#bbe5c4;border-color:#527e62}.icon-button:active,.soft-button:active,.activity-card:active{transform:translateY(2px);box-shadow:0 1px 0 var(--shadow)}
+.levels{display:flex;align-items:center;gap:4px;background:#d2e4dc;padding:3px;border-radius:17px;margin:0 auto}.level{min-height:42px;padding:4px 13px;border:2px solid transparent;border-radius:12px;background:transparent;font-weight:900;font-size:16px;white-space:nowrap;color:var(--ink)}.level small{display:block;font-size:11px;font-weight:900;margin-top:1px;opacity:1}.level[aria-pressed="true"]{background:#fffdf7;border-color:#173e35;box-shadow:inset 0 0 0 1px #173e35}.level[data-level="1"]{color:var(--ink);background:#bbe5c4}.level[data-level="2"]{color:var(--ink);background:#b3def0}.level[data-level="3"]{color:var(--ink);background:#ffc2a8}
+#app .topbar.has-app-update .brand{margin-right:0}.app-update-button{display:flex;align-items:center;justify-content:center;gap:6px;flex:none;min-height:42px;padding:6px 11px;border:2px solid #bda275;border-radius:14px;background:#8b5b2e;color:#fff8e9;box-shadow:0 3px 0 #c6b28b;font-size:15px;font-weight:900;white-space:nowrap}.app-update-button svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.app-update-button:disabled{opacity:.8;cursor:progress}#update-app{margin-right:auto}.compact .app-update-button{min-height:36px;min-width:90px;font-size:13px;padding:4px 7px;gap:5px}.compact .app-update-button svg{width:17px;height:17px}.narrow .topbar.has-app-update{gap:6px}
+.sana-update-shade{position:absolute;inset:0;z-index:40;display:grid;place-items:center;padding:18px;background:#122e38a6}.sana-update-panel{width:min(520px,94%);max-height:100%;overflow:auto;padding:22px 25px;border:3px solid #ffe17a;border-radius:24px;background:#fff8e9;color:var(--ink);box-shadow:0 12px 45px #0004}.sana-update-panel:focus{outline:none}.sana-update-panel h2{margin:0 0 12px;font-size:25px;font-weight:900}.sana-update-panel p{font-size:17px;line-height:1.5;font-weight:800}.sana-update-panel button{display:block;margin:16px 0 0 auto;min-height:44px;padding:8px 22px;border:0;border-radius:14px;background:#8b5b2e;color:#fff8e9;font-weight:900}.compact .sana-update-panel{padding:16px 20px}.compact .sana-update-panel h2{font-size:22px}.compact .sana-update-panel p{font-size:15px}
+#home-view{min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr);padding:6px 14px 10px;gap:8px}.welcome{display:flex;align-items:center;gap:8px;min-height:0;padding:4px 8px;font-size:18px;font-weight:900;line-height:1.25;white-space:nowrap}.welcome h1,.welcome p{font:inherit;color:var(--ink);letter-spacing:0;margin:0}.activity-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;min-height:0}.activity-card{--card:#bbe5c4;--edge:#75ab85;display:flex;flex-direction:column;justify-content:center;align-items:center;min-width:0;min-height:0;padding:10px 8px;border:2px solid var(--edge);border-radius:20px;background:var(--card);box-shadow:0 6px 0 var(--edge);position:relative;transition:transform .15s}.activity-card:nth-child(2){--card:#ffe17a;--edge:#c5a742}.activity-card:nth-child(3){--card:#b3def0;--edge:#71a9c2}.activity-card:nth-child(4){--card:#ffc2a8;--edge:#cb9177}.activity-card .card-art{width:90%;height:53%;max-height:160px;overflow:visible}.activity-card b{font-size:28px;letter-spacing:-.8px;margin-top:7px}.activity-card small{font-size:16px;margin-top:4px;color:var(--ink);font-weight:800}.card-arrow{position:absolute;right:12px;top:10px;font-size:22px;color:#55765c;opacity:.5}
+#activity-view{min-height:0;display:grid;grid-template-rows:auto auto minmax(0,1fr);padding:4px 10px 6px;gap:4px;grid-template-areas:"heading" "controls" "board"}.activity-heading{display:flex;align-items:center;gap:10px;padding:0 3px;grid-area:heading;min-height:42px}.activity-heading h1{font-size:27px;letter-spacing:-.7px;margin:0;font-weight:900}.activity-heading .step-note{font-size:15px;color:var(--ink);margin-left:auto;font-weight:800}.mode-switch{display:flex;gap:3px;padding:3px;border:1px solid #ddd0b8;border-radius:14px;background:#d4c0f0;margin-left:auto;border-color:#a88ec9}.mode-button{border:0;border-radius:10px;background:transparent;min-height:36px;padding:4px 12px;font-size:15px;font-weight:900}.mode-button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #173e35}
+.play-mat{display:flex;flex-direction:column;position:relative;min-height:0;border:2px solid #ddd2bc;border-radius:18px;background:#D8B98E;overflow:hidden;box-shadow:none;grid-area:board}#scene{display:block;flex:1 1 0%;width:100%;height:0;min-height:0;touch-action:none;overflow:hidden}.piece{cursor:grab}.piece:active{cursor:grabbing}.piece.selected{filter:drop-shadow(0 0 9px #f3c65c)}.target{cursor:pointer}.bubble{cursor:pointer}.bubble.allowed{filter:drop-shadow(0 4px 0 #315f6e19)}.bubble.disallowed{opacity:.83}.slider-handle{cursor:ew-resize}.guide-hand{pointer-events:none;animation:guideHand 1.7s ease-in-out infinite;filter:drop-shadow(0 3px 0 #0002)}@keyframes guideHand{0%,100%{transform:translateX(0);opacity:.7}50%{transform:translateX(35px);opacity:1}}#celebrate{position:absolute;inset:0;display:flex;justify-content:center;align-items:flex-start;gap:10px;pointer-events:none;padding-top:10px}#celebrate span{color:#deb73d;font-size:36px;animation:starHello 1.2s ease-out both}#celebrate span:nth-child(2){animation-delay:.08s;font-size:49px}#celebrate span:nth-child(3){animation-delay:.16s}@keyframes starHello{0%{transform:translateY(25px) scale(.3);opacity:0}30%{transform:translateY(0) scale(1.2);opacity:1}80%{opacity:1}100%{transform:translateY(-15px) scale(.9);opacity:0}}
+.paint-tools{display:flex;justify-content:center;align-items:center;gap:12px;min-height:48px}.paint-color{width:38px;height:38px;border:4px solid #fffaf0;box-shadow:0 0 0 1px #d3c5ac,0 3px 0 #d3c5ac;border-radius:50%;background:var(--paint)}.paint-color[aria-pressed="true"]{box-shadow:0 0 0 3px #294f46,0 3px 0 #294f46}.paint-label{font-size:14px;font-weight:900;color:var(--ink);margin-right:5px}
+.companion-bar{display:flex;align-items:center;gap:8px;padding:5px 12px;border-top:0;background:#cceaf1;border-bottom:1px solid #91b8bd;min-height:50px}.sana-badge{width:40px;flex:0 0 40px;text-align:center}.sana-badge svg{width:34px;height:34px}.sana-badge small{display:block;font-size:10px;font-weight:900;margin-top:-1px;color:var(--ink)}#hint{font-size:18px;font-weight:900;line-height:1.2;flex:1;min-width:0}.progress{display:flex;gap:6px;align-items:center;max-width:150px;flex-wrap:wrap}.progress i{display:block;width:12px;height:12px;border-radius:50%;background:#e0d7c0;border:1px solid #cbbb9a}.progress i.done{background:#6aab88;border-color:#4b8a67}.soft-button{display:flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;border:1px solid #b6c8b2;background:#bbe5c4;border-radius:14px;min-height:40px;padding:4px 10px;box-shadow:0 2px 0 #709e79;font-weight:900;font-size:16px;border-color:#709e79}.soft-button svg{width:23px;height:23px}.soft-button.secondary{background:#ffe17a;border-color:#b69c43;box-shadow:0 2px 0 #b69c43}
+#app.compact{grid-template-rows:46px auto minmax(0,1fr);border-radius:12px}.compact .topbar{padding:2px 8px;gap:8px}.compact .brand-mark{width:32px;height:32px}.compact .wordmark{font-size:20px}.compact .brand small{font-size:10px;letter-spacing:1px;margin-top:2px}.compact .levels{padding:2px;gap:2px}.compact .level{padding:3px 10px;min-height:36px;font-size:13px}.compact .level small{font-size:10px}.compact .icon-button{width:38px;min-width:38px;height:38px;border-radius:12px;padding:6px}.compact #home-view{padding:4px 10px 7px;gap:5px;grid-template-rows:auto minmax(0,1fr)}.compact .welcome{padding:3px 6px;font-size:14px}.compact .activity-grid{gap:10px}.compact .activity-card{padding:6px;border-radius:16px;box-shadow:0 4px 0 var(--edge)}.compact .activity-card .card-art{height:52%;max-height:95px}.compact .activity-card b{font-size:22px;margin-top:4px;letter-spacing:-.5px}.compact .activity-card small{font-size:13px;margin-top:3px}.compact .card-arrow{font-size:15px;right:8px;top:6px}.compact #activity-view{padding:3px 6px 5px;grid-template-rows:auto auto minmax(0,1fr);gap:3px}.compact .activity-heading h1{font-size:22px}.compact .step-note{font-size:12px}.compact .mode-switch{padding:2px}.compact .mode-button{font-size:13px;min-height:32px;padding:3px 10px}.compact .play-mat{border-radius:17px}.compact .companion-bar{padding:3px 8px;gap:6px;min-height:40px}.compact .sana-badge{width:32px;flex-basis:32px}.compact .sana-badge svg{width:28px;height:28px}.compact .sana-badge small{font-size:9px}.compact #hint{font-size:14px}.compact .soft-button{font-size:14px;min-height:34px;padding:3px 8px;border-radius:12px}.compact .progress i{width:9px;height:9px}.compact .progress{gap:4px;max-width:85px}.compact .paint-tools{gap:10px;min-height:36px}.compact .paint-color{width:30px;height:30px;border-width:3px}.compact .paint-label{font-size:12px}
+.art-tools{display:flex;justify-content:center;align-items:center;gap:12px;min-height:40px;grid-area:controls}.brush-sizes{display:flex;align-items:center;gap:5px}.art-tool{min-height:36px;padding:5px 10px;border:1px solid #c9bda6;border-radius:10px;background:#ffe17a;font-size:14px;font-weight:900}.art-tool[aria-pressed="true"]{background:#bbe5c4;border-color:#325e47;box-shadow:inset 0 0 0 1px #287c60}#art-reward{position:absolute;left:12px;top:12px;padding:10px 14px;border:2px solid #e4bd58;border-radius:18px;background:#fff8dc;box-shadow:0 4px 12px #59492720;pointer-events:none;text-align:center;font-size:14px;font-weight:800}#art-reward svg{width:42px;height:42px;vertical-align:middle}#art-reward b{display:block;color:#287c60}.compact .art-tools{gap:8px;min-height:36px}.compact .art-tools .paint-tools{gap:6px}.compact .brush-sizes{gap:3px}.compact .art-tool{min-height:32px;font-size:13px;padding:4px 8px}.compact #art-reward{top:6px;left:6px;font-size:11px;padding:5px 10px}.compact #art-reward svg{width:28px;height:28px}.narrow .art-tools{gap:6px}.narrow .art-tools .paint-tools{gap:4px}.narrow .art-tools .paint-label{display:block}
+.narrow .brand-copy,.narrow .step-note{display:none}.narrow .soft-button .button-label{display:inline}.narrow .brand{margin-right:0}.narrow .level{padding-left:9px;padding-right:9px}.narrow .topbar{gap:7px}.narrow .companion-bar{gap:8px}.narrow .activity-card small{display:block;font-size:12px}.narrow .activity-card b{font-size:22px}.narrow .progress{display:none}
+.bubble-mat{display:flex;flex-direction:column}.bubble-mat #scene{flex:1 1 0%;height:0;min-height:0}.bubble-tracker{display:flex;align-items:center;justify-content:center;gap:12px;padding:6px 8px;background:#daf0df;border-bottom:1px solid #a2c4aa;flex:0 0 auto;z-index:1}.bubble-score{font-size:16px;font-weight:900;white-space:nowrap;color:var(--ink);padding:3px 6px;background:#ffe17a;border-radius:8px}.bubble-targets{display:flex;justify-content:center;align-items:center;gap:5px;flex-wrap:wrap;max-width:calc(100% - 110px)}.bubble-target{display:grid;place-items:center;position:relative;min-width:30px;height:30px;padding:2px 5px;border:1px solid #d5cbb5;border-radius:8px;background:#fff1b7;color:var(--ink);font-weight:900;font-size:16px;border-color:#b5a367}.bubble-target[data-collected="true"]{color:var(--ink);border-color:#325e47;box-shadow:0 2px 0 #b5c5ac}.bubble-target svg{width:22px;height:22px}.pop-dot{width:19px;height:19px;border-radius:50%;border:2px solid white;box-shadow:0 0 0 1px #cdc6af}.compact .bubble-tracker{padding:4px 7px;gap:8px}.compact .bubble-score{font-size:13px;padding:2px 5px}.compact .bubble-targets{gap:3px;max-width:calc(100% - 82px)}.compact .bubble-target{min-width:24px;height:26px;padding:1px 4px;font-size:14px;border-radius:6px}.compact .bubble-target svg{width:18px;height:18px}.compact #bubble-modes .mode-button{padding-left:10px;padding-right:10px}.narrow #bubble-modes .mode-button{padding-left:8px;padding-right:8px}#app[data-view="bubbles"] .step-note{display:none}
+.bubble-settings{display:flex;justify-content:center;align-items:center;gap:12px;min-height:42px;padding:0;grid-area:controls}.bubble-setting-group{display:flex;align-items:center;gap:3px;padding:3px 5px;background:#bbe5c4;border-radius:12px}.bubble-setting-group>span{font-size:14px;font-weight:900;color:var(--ink);margin-right:4px}.bubble-settings button{border:1px solid #c9bda6;border-radius:10px;background:#b3def0;min-height:36px;padding:4px 10px;font-size:15px;font-weight:900}.bubble-settings button[aria-pressed="true"]{background:#ffe17a;border-color:#173e35;box-shadow:inset 0 0 0 1px #173e35}.compact .bubble-settings{gap:10px;min-height:38px;padding:0}.compact .bubble-settings button{font-size:13px;min-height:32px;padding:3px 8px}.compact .bubble-setting-group>span{font-size:12px}.narrow .bubble-settings{gap:9px}.narrow .bubble-settings button{padding:4px 7px}
+
+.mode-button:nth-child(odd){background:#ffe17a}.mode-button:nth-child(even){background:#bbe5c4}
+.bubble-setting-group:last-child{background:#ffe17a}.bubble-setting-group:last-child button:not([aria-pressed="true"]){background:#ffc2a8}
+#fullscreen{background:#b3def0}#sound[aria-pressed="false"]{background:#ffc2a8}
+.compact .activity-heading{min-height:36px}.bubble-targets{max-width:calc(100% - 130px)}.compact .bubble-targets{max-width:calc(100% - 105px)}
+@media(min-width:1200px){#app[data-view="bubbles"] #activity-view{grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto minmax(0,1fr);grid-template-areas:"heading controls" "board board";column-gap:10px}}
+/* Immersive play keeps the existing game and controls alive while using every pixel. */
+#app.immersive{grid-template-rows:minmax(0,1fr);border:0;border-radius:0;background:#D8B98E}
+.immersive .topbar{position:absolute;inset:0;display:block;padding:0;background:transparent;border:0;pointer-events:none;z-index:10}
+.immersive .topbar>:not(#sound):not(#fullscreen):not(#game-back),.immersive .companion-bar{display:none!important}
+.immersive .topbar #sound,.immersive .topbar #fullscreen,.immersive .topbar #game-back{position:absolute;top:max(8px,env(safe-area-inset-top));width:46px;min-width:46px;height:46px;padding:10px;pointer-events:auto;box-shadow:0 2px 8px #0008;border:2px solid #fff;border-radius:14px}
+.immersive .topbar #fullscreen{right:max(8px,env(safe-area-inset-right));top:calc(max(8px,env(safe-area-inset-top)) + 58px)}
+.immersive .topbar #sound{right:calc(max(8px,env(safe-area-inset-right)) + 54px)}
+#app.immersive #activity-view{padding:0;gap:0;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);grid-template-areas:"board"}
+.immersive #bubble-settings,.immersive #art-tools{display:none!important}
+.immersive .play-mat{border:0;border-radius:0;box-shadow:none}
+.immersive #home-view{grid-template-rows:minmax(0,1fr);padding:64px 10px 10px;background:var(--paper)}
+.immersive .welcome{display:none}
+/* Board chrome has dedicated rows, keeping controls clear of gameplay. */
+#app:not([data-view="home"]) #activity-view{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);grid-template-areas:"controls" "board"}
+.play-toolbar{position:relative;display:flex;align-items:stretch;justify-content:space-between;gap:8px;padding:6px;background:#D8B98E;flex:0 0 auto}
+#game-results{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;flex:0 1 210px;min-width:120px;padding:4px 8px;border:2px solid #f8e2a3;border-radius:8px;background:#ffe17a;color:var(--ink);font-weight:900;line-height:1.15}
+#activity-name{font-size:17px;font-weight:900;letter-spacing:0;line-height:1.15;margin:0;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#result-score,.bubble-score{font-size:16px;font-weight:900;white-space:nowrap;padding:0;background:transparent;color:var(--ink)}
+#play-options{position:relative;display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap;margin-left:auto;min-width:0;padding:3px;border:2px solid #b3def0;border-radius:8px;background:#182b36}
+#play-options .levels{margin:0;padding:2px;gap:2px;border-radius:8px}#play-options .level{font-size:14px;min-height:34px;padding:3px 8px;border-radius:7px}#play-options .level small{display:none}
+#play-options .mode-switch{margin:0;border-radius:8px;padding:2px;gap:2px}#play-options .mode-button{font-size:14px;min-height:34px;padding:3px 8px;border-radius:6px}
+.bubble-tracker{background:#D8B98E;border:0;padding:0 6px 5px;gap:0;min-height:0}.bubble-targets{flex:1;max-width:none;min-height:24px}.compact .bubble-targets{max-width:none;gap:2px}.compact .bubble-target{min-width:21px;height:24px;font-size:13px;padding:1px 3px}
+.play-navigation{position:relative;flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 6px;background:#D8B98E;z-index:2}
+.play-navigation .soft-button{font-size:16px;min-height:40px;box-shadow:none;background:#ffe17a;border:2px solid #80613b;border-radius:9px;padding:4px 10px}.play-navigation .soft-button svg{width:22px;height:22px}
+#game-mid-controls{display:flex;align-items:center;justify-content:center;gap:8px}.play-navigation .icon-button{position:static;min-width:42px;width:42px;height:40px;padding:7px;border:2px solid #fff;border-radius:9px;box-shadow:none}
+.compact .play-toolbar{padding:4px 5px;gap:6px}.compact #game-results{min-width:105px;flex-basis:150px;padding:3px 6px}.compact #activity-name{font-size:14px}.compact #result-score,.compact .bubble-score{font-size:14px}
+.compact #play-options{gap:4px;padding:2px}.compact #play-options .level,.compact #play-options .mode-button{font-size:13px;min-height:30px;padding:3px 6px}
+.compact .play-navigation{padding:4px 5px;gap:6px}.compact .play-navigation .soft-button{font-size:14px;min-height:34px;padding:3px 7px}.compact .play-navigation .soft-button svg{width:18px;height:18px}.compact .play-navigation .icon-button{height:34px;width:36px;min-width:36px;padding:5px}.compact #game-mid-controls{gap:6px}
+/* Appreciation has its own centered top row, never over beads or controls. */
+.narrow.compact .bubble-target{min-width:19px;padding:1px 2px}
+#art-reward,.compact #art-reward,.immersive #art-reward{position:relative;order:-1;align-self:center;flex:0 0 auto;left:auto;top:auto;display:flex;align-items:center;justify-content:center;gap:6px;max-width:calc(100% - 12px);margin:4px auto;padding:4px 10px;font-size:14px;line-height:1.15;border-radius:10px;box-shadow:none}
+#art-reward svg,.compact #art-reward svg{width:28px;height:28px;flex:none}#art-reward b{display:inline}.compact #art-reward{font-size:13px}
+.activity-card b,.activity-card small{max-width:100%;text-align:center}.activity-card:nth-child(5){--card:#dbc9f4;--edge:#a18abd}#abacus-stage{font-size:15px;font-weight:900;padding:6px 10px;border-radius:6px;background:#dbc9f4;color:var(--ink)}.compact #abacus-stage{font-size:13px}#app[data-view="abacus"] #scene [data-bead-row][aria-disabled="false"]{cursor:grab}#app[data-view="abacus"] #scene [data-bead-row][aria-disabled="false"]:active{cursor:grabbing}.abacus-pop{animation:abacusPop .22s ease-out;transform-box:fill-box;transform-origin:center}@keyframes abacusPop{0%,100%{opacity:1;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+.activity-grid{--card-gap:12px;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 4 * var(--card-gap)) / 5);gap:var(--card-gap);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior:contain;scrollbar-width:none;touch-action:none;padding-bottom:6px;margin-bottom:-6px}
+.activity-grid::-webkit-scrollbar{display:none}.activity-grid .activity-card{scroll-snap-align:start}.activity-grid[data-dragging="true"]{scroll-snap-type:none}
+.compact .activity-grid{--card-gap:10px}.upcoming-card{--card:#e4ddf0;--edge:#aa9aba}.upcoming-card .card-art{color:#735b99}.upcoming-card small{color:var(--ink)}
+.game-pages{display:flex;align-items:center;gap:6px}.game-pages button{background:#ffe17a}.game-pages button:disabled{opacity:.45;cursor:default}.game-pages .icon-button{min-width:40px;width:40px}.compact .game-pages{gap:4px}.compact .game-pages .icon-button{width:34px;min-width:34px;height:36px}.compact .game-pages svg{width:20px;height:20px}
+#app:not([data-view="home"]) .game-pages{display:none}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.parent-age{position:relative;display:flex;align-items:center;gap:5px;flex:none;font-weight:900;font-size:12px}#age-choice{min-height:40px;max-width:126px;padding:5px 10px;border:2px solid #91b7a2;border-radius:11px;font:inherit;font-size:15px;font-weight:900;background:#ffe17a;color:var(--ink)}#age-choice::after{content:' ▾'}.narrow .parent-age>span{display:none}.narrow #age-choice{max-width:112px;font-size:13px;min-height:36px}.narrow .topbar{gap:5px;padding-left:7px;padding-right:7px}
+#age-menu{position:absolute;top:calc(100% + 5px);right:0;z-index:20;width:150px;max-height:calc(var(--frame-h) - 65px);overflow-y:auto;padding:5px;display:grid;gap:3px;border:2px solid #173e35;border-radius:13px;background:#fff8e9;box-shadow:0 4px 12px #0006;overscroll-behavior:contain}#age-menu button{width:100%;min-height:40px;border:1px solid #91b7a2;border-radius:8px;background:#d9eff1;font-size:16px;font-weight:900;color:var(--ink);text-align:left;padding:5px 10px}#age-menu button[aria-selected="true"]{background:#ffe17a;border:2px solid #173e35}#age-menu button:focus-visible{outline-offset:-4px}
+html,body{touch-action:pan-x pan-y;overscroll-behavior:none}
+#app.short-play:not([data-view="home"]):not(.immersive){grid-template-rows:30px minmax(0,1fr)}.short-play:not([data-view="home"]):not(.immersive)>.topbar{display:flex}.short-play:not([data-view="home"])>.companion-bar{position:absolute;top:1px;right:6px;display:flex;min-height:0;height:26px;padding:0;gap:4px;background:none;border:0;z-index:3}.short-play:not([data-view="home"]) .companion-bar #hint,.short-play:not([data-view="home"]) .companion-bar #progress{display:none}.short-play:not([data-view="home"]) .companion-bar{min-height:30px;padding:1px 5px}.short-play:not([data-view="home"]) .sana-badge{display:none}.short-play:not([data-view="home"]) #hint{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.short-play:not([data-view="home"]) .companion-bar .soft-button{min-height:28px;padding:2px 6px;font-size:12px}.short-play #play-options .level,.short-play #play-options .mode-button{min-height:26px;font-size:12px;padding:2px 5px}.short-play #play-options{gap:3px}
+.short-play:not([data-view="home"]){grid-template-columns:minmax(0,1fr)}.short-play:not([data-view="home"]) .companion-bar,.short-play:not([data-view="home"]) #activity-view,.short-play:not([data-view="home"]) #hint{min-width:0}.short-play .play-toolbar{padding:1px 2px;gap:3px}
+.age-profile.compact #game-results{flex-basis:105px;min-width:90px}.bubble-settings>#bubble-full-set{white-space:nowrap;background:#e0c9f0;color:var(--ink)}.bubble-settings>#bubble-full-set[aria-pressed="true"]{background:#ffe17a}.short-play #bubble-settings{gap:3px}.short-play .bubble-setting-group{padding-left:2px;padding-right:2px}.short-play .bubble-settings button{padding-left:5px;padding-right:5px}
+.short-play:not([data-view="home"]):not(.immersive)>.topbar{gap:5px;padding:1px 178px 1px 6px}.short-play:not([data-view="home"]) .app-update-button{min-height:26px;min-width:76px;font-size:12px;padding:2px 6px}.short-play:not([data-view="home"]) #age-choice{min-height:26px;font-size:12px}.short-play:not([data-view="home"]) .topbar .brand-mark{width:24px;height:24px}.short-play:not([data-view="home"]) .topbar .icon-button{width:26px;min-width:26px;height:26px;padding:4px}.short-play:not([data-view="home"]) .parent-age>span{display:none}
+.short-play:not([data-view="home"])>.companion-bar{min-height:0;padding:0;gap:4px}.short-play:not([data-view="home"]) .companion-bar .soft-button{min-height:26px;height:26px;padding:2px 5px;font-size:12px;gap:4px}.short-play:not([data-view="home"]) .companion-bar .soft-button svg{width:16px;height:16px}
+
+/* Age selection is the only visible learning level. */
+#play-levels{display:none!important}
+/* Consistent accessible sound state colors: red OFF, green ON. */
+#sound[aria-pressed="false"],#music-toggle[aria-pressed="false"]{background:#f6a6a6!important;color:#512424!important;border-color:#a94b4b!important}
+#sound[aria-pressed="true"],#music-toggle[aria-pressed="true"]{background:#a9e4b9!important;color:#173e2b!important;border-color:#3d8d5a!important}
+
+/* Slide Cave only: extend cave scenery into SVG letterbox areas. All other games retain sandalwood. */
+#app[data-view="slide"] .play-mat{background:#b6df84 url("./train-art/farm-sky-v126.webp") center center / cover no-repeat;}
+
+/* Compact drawing previews, displayed only for Brush & Paint. */
+.brush-thumbnails:not([hidden]){display:flex;align-items:center;gap:5px;flex:0 0 auto;min-height:42px;max-height:50px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;touch-action:pan-x;background:#fff2d9;border-bottom:2px solid #b8976b;padding:3px 7px}
+.brush-thumbnails[hidden]{display:none!important}
+.brush-thumb{appearance:none;-webkit-appearance:none;font-family:inherit;cursor:pointer;display:flex;flex:0 0 auto;align-items:center;justify-content:center;gap:4px;padding:2px 5px;border:1.5px solid #bea67d;border-radius:8px;background:#fffaf0;color:#254c40;font-weight:800;font-size:11px;min-width:58px;max-height:40px;white-space:nowrap}
+.brush-thumb svg{width:30px;height:30px;flex:0 0 auto;overflow:visible}
+.brush-thumb.current{border:3px solid #2d725c;background:#d5f2e3}
+.brush-thumb.past{background:#e5e4df;color:#617269}
+
+/* v0.72: place game-specific options at the bottom of every play room.
+   The scene takes the newly released upper space without stretching its artwork. */
+#app:not([data-view="home"]) .play-mat{display:flex;flex-direction:column;min-height:0}
+#app:not([data-view="home"]) .play-mat>.play-toolbar{order:20;flex:0 0 auto;max-height:25%;overflow:auto;align-items:center}
+#app:not([data-view="home"]) .play-mat>#scene{order:0;flex:1 1 auto;min-height:0;height:0;width:100%}
+#app:not([data-view="home"]) .play-mat>.bubble-tracker{order:1;flex:0 0 auto}
+#app:not([data-view="home"]) .play-mat>.brush-thumbnails{order:2;flex:0 0 auto}
+#app:not([data-view="home"]) .play-mat>.play-navigation{order:30;flex:0 0 auto}
+#app:not([data-view="home"]) .play-mat>#celebrate,
+#app:not([data-view="home"]) .play-mat>#art-reward{z-index:4}
+/* Keep the bottom bar usable on short screens and in both orientations. */
+#app.short-play:not([data-view="home"]) .play-mat>.play-toolbar{max-height:30%;padding:2px 4px}
+#app:not([data-view="home"]) .play-mat>.play-toolbar #play-options{flex-wrap:wrap}
+
+
+/* v0.72: true compact single-line settings bar in every game room. */
+#app:not([data-view="home"]):not(.immersive) .play-mat>.play-toolbar{
+  flex:0 0 38px!important;height:38px!important;min-height:38px!important;max-height:38px!important;
+  width:100%;padding:2px 5px!important;gap:5px;overflow-x:auto!important;overflow-y:hidden!important;
+  display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;
+  scrollbar-width:thin;
+}
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #game-results{
+  flex:0 0 auto!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;
+  align-items:center!important;gap:4px;max-width:none!important;min-width:max-content!important;
+  height:32px!important;overflow:visible!important;
+}
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #game-results > *{
+  white-space:nowrap!important;word-break:normal!important;overflow-wrap:normal!important;
+  width:auto!important;max-width:none!important;min-width:0!important;
+  margin:0!important;line-height:1.1!important;font-size:12px!important;
+}
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #play-options{
+  display:flex!important;flex:0 0 auto!important;min-width:max-content!important;max-width:none!important;
+  height:32px!important;align-items:center!important;flex-direction:row!important;flex-wrap:nowrap!important;gap:4px!important;
+}
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #play-options .levels,
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #play-options .mode-switch{
+  display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;
+  min-width:max-content!important;height:32px!important;gap:3px!important;
+}
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #play-options button,
+#app:not([data-view="home"]):not(.immersive) .play-toolbar #abacus-stage{
+  flex:0 0 auto!important;min-height:28px!important;max-height:30px!important;height:28px!important;
+  padding:2px 7px!important;font-size:12px!important;line-height:1!important;
+  white-space:nowrap!important;word-break:normal!important;writing-mode:horizontal-tb!important;
+}
+/* Low-obstruction exit: transparent background, no card or shadow. */
+#app.immersive #exit-play{
+  right:max(5px,env(safe-area-inset-right))!important;
+  top:max(5px,env(safe-area-inset-top))!important;
+  width:34px!important;min-width:34px!important;height:34px!important;min-height:34px!important;
+  padding:0!important;border:0!important;border-radius:50%!important;
+  background:transparent!important;box-shadow:none!important;
+  color:#173e35!important;font-size:29px!important;line-height:1!important;
+  text-shadow:0 1px 2px #fff,0 -1px 2px #fff;
+}
+
+
+/* v0.82: game-specific controls only; never reveal hidden controls through display:flex. */
+#app #play-levels, #app #play-levels * {display:none!important}
+#app #play-options [hidden], #app #play-options[hidden],
+#app #bubble-modes[hidden], #app #brush-modes[hidden],
+#app #abacus-stage[hidden], #app #bubble-settings[hidden],
+#app #art-tools[hidden], #app #paint-tools[hidden] {display:none!important}
+#app[data-view="brush"] #bubble-modes,#app[data-view="brush"] #abacus-stage,
+#app[data-view="drag"] #bubble-modes,#app[data-view="drag"] #brush-modes,
+#app[data-view="slide"] #bubble-modes,#app[data-view="slide"] #brush-modes,
+#app[data-view="abacus"] #bubble-modes,#app[data-view="abacus"] #brush-modes,
+#app[data-view="bubbles"] #brush-modes {display:none!important}
+#app:not([data-view="home"]) .play-mat>.game-status-top{order:-10;flex:0 0 auto;display:flex;align-items:center;min-height:30px;max-height:40px;padding:2px 6px;background:#d8b98e;overflow:hidden}
+#app:not([data-view="home"]) .game-status-top #game-results{display:flex;flex:1 1 auto;flex-direction:row;align-items:center;justify-content:flex-start;gap:9px;min-width:0;max-width:none;padding:3px 9px;min-height:27px;overflow:hidden}
+#app:not([data-view="home"]) .game-status-top #activity-name{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px}
+#app:not([data-view="home"]) .game-status-top #result-score,
+#app:not([data-view="home"]) .game-status-top .bubble-score{flex:0 0 auto;font-size:13px;white-space:nowrap}
+#app:not([data-view="home"]) .play-mat>.play-toolbar{order:20;flex:0 0 auto;max-height:43px;min-height:32px;overflow-x:auto;overflow-y:hidden;padding:2px 5px;align-items:center;justify-content:center}
+#app:not([data-view="home"]) .play-toolbar #play-options{flex:0 1 auto;min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;justify-content:flex-start;background:transparent;border:0;padding:0;margin:0}
+#app:not([data-view="home"]) .play-toolbar #play-options:empty{display:none}
+#app:not([data-view="home"]) .play-toolbar #play-options .mode-switch{min-width:max-content}
+#app.immersive .game-status-top{display:none!important}
+
+/* v0.82: activity-scoped controls, preventing unrelated controls in every room. */
+#app[data-view="abacus"] #play-levels,#app[data-view="abacus"] #bubble-modes,#app[data-view="abacus"] #bubble-settings,#app[data-view="abacus"] #brush-modes,#app[data-view="abacus"] #art-tools,#app[data-view="abacus"] #paint-tools,
+#app[data-view="drag"] #play-levels,#app[data-view="drag"] #bubble-modes,#app[data-view="drag"] #bubble-settings,#app[data-view="drag"] #brush-modes,#app[data-view="drag"] #art-tools,#app[data-view="drag"] #paint-tools,
+#app[data-view="slide"] #play-levels,#app[data-view="slide"] #bubble-modes,#app[data-view="slide"] #bubble-settings,#app[data-view="slide"] #brush-modes,#app[data-view="slide"] #art-tools,#app[data-view="slide"] #paint-tools,
+#app[data-view="brush"] #play-levels,#app[data-view="brush"] #bubble-modes,#app[data-view="brush"] #bubble-settings,#app[data-view="brush"] #abacus-stage,
+#app[data-view="bubbles"] #play-levels,#app[data-view="bubbles"] #brush-modes,#app[data-view="bubbles"] #art-tools,#app[data-view="bubbles"] #paint-tools,#app[data-view="bubbles"] #abacus-stage {display:none!important}
+
+/* v0.82: Hide the entire empty option toolbar in games without option modes.
+   Do not hide the shared navigation row or abacus totals. */
+#app[data-view="abacus"] .play-mat>.play-toolbar,
+#app[data-view="drag"] .play-mat>.play-toolbar,
+#app[data-view="slide"] .play-mat>.play-toolbar {display:none!important;min-height:0!important;max-height:0!important;padding:0!important;margin:0!important;border:0!important}
+#app[data-view="abacus"] #play-options,
+#app[data-view="abacus"] #play-options > *,
+#app[data-view="drag"] #play-options,
+#app[data-view="slide"] #play-options {display:none!important}
+#app[data-view="bubbles"] #brush-modes,
+#app[data-view="brush"] #bubble-modes {display:none!important}
+
+/* v1.03: independent child-friendly vibration toggle. */
+#vibration-toggle{font-size:23px;font-weight:900;background:#a9e4b9;color:#173e2b;border:2px solid #3d8d5a}
+#vibration-toggle[aria-pressed="false"]{background:#f6a6a6;color:#512424;border-color:#a94b4b}
+#app.immersive #vibration-toggle{position:absolute;top:auto!important;right:auto!important;bottom:max(12px,env(safe-area-inset-bottom))!important;left:max(12px,env(safe-area-inset-left))!important;z-index:100;width:48px;height:48px;min-width:48px;display:flex!important;align-items:center;justify-content:center;border:3px solid #fff;border-radius:12px;pointer-events:auto;touch-action:manipulation;box-shadow:0 2px 8px #0005}
+/* v0.82 shared countryside backdrop: decorative only; never captures touches. */
+#app:not([data-view="home"]) .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat}
+#app[data-view="bubbles"] .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat}
+#app:not([data-view="home"]) #scene{background:transparent!important}
+
+/* v0.89: keep the original button background; highlight only the muted icon. */
+#sound[aria-pressed="false"],#music-toggle[aria-pressed="false"]{
+  background:#ffd4d4!important;color:#d31324!important;
+  border-color:#a89a62!important;box-shadow:0 3px 0 #dfd3bb!important;
+  position:relative!important;
+}
+#sound[aria-pressed="false"] svg,#music-toggle[aria-pressed="false"] svg{
+  color:#e21d29!important;fill:currentColor;
+}
+#sound[aria-pressed="false"]::after,#music-toggle[aria-pressed="false"]::after{
+  content:"";position:absolute;left:19%;top:50%;width:62%;height:3px;
+  background:#e21d29;border-radius:3px;transform:translateY(-50%) rotate(-43deg);
+  pointer-events:none;z-index:3;
+}
+#sound[aria-pressed="true"],#music-toggle[aria-pressed="true"]{
+  background:#a9e4b9!important;color:#173e2b!important;border-color:#3d8d5a!important;
+}
+
+/* v1.03: music note and speaker use identical icon dimensions */
+#music-toggle svg,#sound svg{width:24px;height:24px;display:block;flex:none}
+/* v1.03 fullscreen resilience: retain a countryside fallback behind the SVG. */
+#app[data-view="bubbles"] .play-mat, #app[data-view="bubbles"].immersive .play-mat {background-color:#b6df84!important;background-image:url('./train-art/farm-sky-v126.webp')!important;background-position:center!important;background-size:cover!important;}
+#app[data-view="bubbles"] #scene {background:transparent!important;}
+
+/* v1.03: shared top-of-play-room item/progress strip in every activity. */
+#app:not([data-view="home"]) .play-mat>.item-progress-strip:not([hidden]){
+ display:flex!important;order:-5!important;flex:0 0 auto!important;align-items:center;gap:5px;
+ min-height:42px;max-height:48px;padding:3px 8px;overflow-x:auto;overflow-y:hidden;
+ white-space:nowrap;touch-action:pan-x;overscroll-behavior-x:contain;
+ background:#fff1d4;border-bottom:2px solid #b8976b;scrollbar-width:thin;z-index:3;
+}
+.item-progress-strip[hidden]{display:none!important}
+.item-chip{position:relative;display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;
+ min-width:40px;height:34px;gap:4px;padding:2px 6px;border:2px solid #bda277;border-radius:9px;
+ background:#fff9ea;color:#24483d;font-size:14px;font-weight:900;box-sizing:border-box}
+.item-chip svg{height:27px;width:27px;flex:none;overflow:visible}
+.item-chip.is-current{border:3px solid #e1a900;background:#ffe58a}
+.item-chip.is-done{border-color:#32835a;background:#d2f3d9}
+.item-chip.is-done::after{content:'✓';font-size:12px;color:#fff;background:#27834d;
+ position:absolute;top:-3px;right:-3px;border-radius:50%;width:15px;height:15px;text-align:center;line-height:15px}
+.item-chip.is-later{opacity:.45}
+#app[data-view="brush"] .play-mat>.brush-thumbnails{display:none!important}
+#app[data-view="bubbles"] .play-mat>.bubble-tracker{display:none!important}
+/* SVG drag board's legacy thumbnail row is hidden; the shared strip replaces it. */
+#app[data-view="drag"] #scene{background:transparent!important}
+#app.immersive .play-mat>.item-progress-strip:not([hidden]){display:flex!important;order:-5!important;max-height:48px!important}
+#app.immersive .game-status-top{display:none!important}
+@media(max-width:700px){.item-chip{min-width:35px;height:32px;font-size:12px;padding:2px 4px}}
+
+/* v1.03 — exclusive age choice, compact header, no dropdown overlay. */
+.parent-age{display:flex!important;align-items:center;gap:3px!important;flex:none!important;position:static!important}
+.parent-age>span{display:inline!important;font-size:12px!important}
+.age-radio{min-width:31px;height:34px;padding:2px 5px;border:2px solid #9ab4a6;border-radius:9px;background:#fff8e9;color:#21463a;font-size:16px;font-weight:900;line-height:1;cursor:pointer}
+.age-radio[aria-checked="true"]{background:#ffe17a;border-color:#234e40;box-shadow:inset 0 0 0 1px #234e40}
+.age-radio[aria-checked="true"]::before{content:'✓';font-size:10px;margin-right:2px}
+.short-play:not([data-view="home"]) .age-radio{min-width:25px;height:26px;font-size:12px;padding:1px 2px}
+.short-play:not([data-view="home"]) .parent-age>span{display:inline!important;font-size:10px!important}
+.narrow .parent-age>span{display:inline!important}
+/* The available items are a single fitted row, never a scroll carousel. */
+#app:not([data-view="home"]) .play-mat>.item-progress-strip:not([hidden]){overflow:hidden!important;touch-action:auto!important;gap:2px!important;padding:3px 4px!important;justify-content:stretch!important;white-space:nowrap!important}
+.item-progress-strip .item-chip{flex:1 1 0!important;min-width:0!important;max-width:none!important;overflow:hidden!important;height:34px!important;padding:1px!important;font-size:clamp(8px,1vw,13px)!important;gap:1px!important;border-width:1px!important;border-radius:5px!important}
+.item-progress-strip .item-chip svg{width:min(24px,90%)!important;height:min(24px,90%)!important;min-width:0!important}
+.item-progress-strip .item-chip.is-done::after{font-size:9px!important;width:12px!important;height:12px!important;line-height:12px!important}
+#app.immersive .play-mat>.item-progress-strip:not([hidden]){overflow:hidden!important}
+
+/* v1.03: readable, fitted top-strip thumbnails in every game and mode. */
+#app:not([data-view="home"]) .play-mat>.item-progress-strip:not([hidden]){
+  background:#e7f1f3!important;border-bottom:2px solid #7196a1!important;
+  gap:3px!important;padding:3px 5px!important;overflow:hidden!important;
+}
+.item-progress-strip .item-chip{
+  background:#dceff5!important;border-color:#739daa!important;color:#163d46!important;
+  min-width:0!important;flex:1 1 0!important;box-sizing:border-box!important;
+  font-weight:900!important;line-height:1!important;text-align:center!important;
+  overflow:hidden!important;white-space:nowrap!important;
+}
+.item-progress-strip .item-chip:nth-child(3n+2){background:#f6e7ed!important;border-color:#b88b9d!important}
+.item-progress-strip .item-chip:nth-child(3n){background:#f2ead2!important;border-color:#b3a17a!important}
+.item-progress-strip .item-chip.is-current{background:#ffe17a!important;border:2px solid #926600!important;color:#173c35!important}
+.item-progress-strip .item-chip.is-done{background:#bfeccc!important;border:2px solid #2d8452!important;color:#173c35!important}
+.item-progress-strip .item-chip svg{display:block!important;flex-shrink:1!important;max-width:100%!important;width:min(26px,95%)!important;height:min(27px,95%)!important;overflow:visible!important}
+#app.immersive .item-progress-strip .item-chip{min-width:0!important}
+
+/* v1.24: all thumbnails fit one row, without a carousel. */
+#app:not([data-view="home"]) .play-mat>.item-progress-strip:not([hidden]),
+#app.immersive .play-mat>.item-progress-strip:not([hidden]){
+ display:grid!important;grid-template-columns:repeat(var(--thumb-count,1),minmax(0,1fr))!important;
+ width:100%!important;box-sizing:border-box!important;align-items:center!important;
+ gap:2px!important;padding:3px 5px!important;height:54px!important;min-height:54px!important;max-height:54px!important;
+ overflow:hidden!important;touch-action:auto!important;scroll-snap-type:none!important;scrollbar-width:none;
+}
+.item-progress-strip .item-chip,
+#app.immersive .item-progress-strip .item-chip{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ flex:initial!important;width:auto!important;min-width:0!important;max-width:none!important;
+ height:44px!important;padding:1px!important;gap:1px!important;border-radius:7px!important;border-width:1px!important;
+ font-size:clamp(10px,calc((var(--frame-w) - 70px) / var(--thumb-count,1) * .6),18px)!important;line-height:1!important;
+ white-space:nowrap!important;overflow:hidden!important;scroll-snap-align:none;
+}
+.item-progress-strip .item-chip svg{
+ width:min(36px,100%)!important;height:36px!important;max-width:100%!important;max-height:95%!important;
+ min-width:0!important;flex:0 1 auto!important;overflow:hidden!important;
+}
+.item-progress-strip .item-chip .item-emoji{font-size:clamp(12px,calc((var(--frame-w) - 100px) / var(--thumb-count,1) * .6),28px)!important;line-height:1!important}
+.item-progress-strip .item-chip .item-index{
+ position:absolute;bottom:1px;right:1px;font-size:9px;line-height:1;
+ border-radius:3px;padding:1px;background:rgba(255,255,255,.9);
+}
+.item-progress-strip .item-chip.is-done::after{
+ width:10px!important;height:10px!important;line-height:10px!important;font-size:8px!important;top:0!important;right:0!important;z-index:2;
+}
+.item-progress-strip .brush-choice:focus-visible{outline:3px solid #226eec!important;outline-offset:-3px!important}
+#app[data-view="abacus"] .play-mat>.item-progress-strip:not([hidden]){
+ height:46px!important;min-height:46px!important;max-height:46px!important;
+}
+#app[data-view="abacus"] .item-progress-strip .item-chip{height:37px!important;}
+
+/* v1.17: Exit button is anchored to the MEASURED bottom edge of the
+   thumbnail band. Do not use a hard-coded top offset. */
+#app.immersive .play-mat #exit-play,
+#app.immersive .play-mat:has(> .item-progress-strip:not([hidden])) #exit-play,
+#app.immersive .play-mat:not(:has(> .item-progress-strip:not([hidden]))) #exit-play {
+  /* v1.17: offset measured in local, unrotated playroom pixels. */
+  position:absolute!important;
+  top:var(--sana-exit-top, 0px)!important;
+  right:0!important;
+  bottom:auto!important;
+  left:auto!important;
+  width:46px!important;height:46px!important;
+  min-width:46px!important;min-height:46px!important;
+  box-sizing:border-box!important;
+  background:transparent!important;
+  border:2px solid #111!important;
+  border-radius:10px!important;
+  z-index:120!important;
+}
+</style>
+<script>if(!window.sanaTouchGuardReady){for(const type of ['contextmenu','selectstart','dragstart'])document.addEventListener(type,event=>event.preventDefault(),{capture:true});window.sanaTouchGuardReady=true;}</script>
+<script>for(const type of ['touchstart','touchmove'])document.addEventListener(type,event=>{if(event.touches.length>1)event.preventDefault();},{passive:false,capture:true});for(const type of ['gesturestart','gesturechange'])document.addEventListener(type,event=>event.preventDefault(),{passive:false});</script>
+<meta name="sana-release" content="sana-little-hands-live-v199-sanatoddler-name">
+<style>
+/* Keep balloon choices together and give the travelling rows the released height. */
+#app[data-view="bubbles"] #bubble-settings{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;gap:4px;scrollbar-width:thin}
+#app[data-view="bubbles"] #bubble-settings>*{flex:0 0 auto}
+#app[data-view="bubbles"] #bubble-settings #bubble-modes{margin:0}
+#app[data-view="bubbles"]:not(.immersive) .play-mat>.play-toolbar{display:none!important}
+</style>
+<style>
+#music-toggle{font-size:24px;font-weight:900;color:#183f37;background:#d6c4fa}
+#music-toggle[aria-pressed="true"]{background:#bce8c8}
+.immersive .topbar>:not(#sound):not(#music-toggle):not(#fullscreen):not(#game-back){display:none!important}
+.immersive .topbar #music-toggle{position:absolute;top:max(8px,env(safe-area-inset-top));right:calc(max(8px,env(safe-area-inset-right)) + 108px);z-index:12;width:46px;min-width:46px;height:46px}
+
+/* Slide Cave only: extend cave scenery into SVG letterbox areas. All other games retain sandalwood. */
+#app[data-view="slide"] .play-mat{background:#b6df84 url("./train-art/farm-sky-v126.webp") center center / cover no-repeat;}
+
+/* Compact drawing previews, displayed only for Brush & Paint. */
+.brush-thumbnails:not([hidden]){display:flex;align-items:center;gap:5px;flex:0 0 auto;min-height:42px;max-height:50px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;touch-action:pan-x;background:#fff2d9;border-bottom:2px solid #b8976b;padding:3px 7px}
+.brush-thumbnails[hidden]{display:none!important}
+.brush-thumb{appearance:none;-webkit-appearance:none;font-family:inherit;cursor:pointer;display:flex;flex:0 0 auto;align-items:center;justify-content:center;gap:4px;padding:2px 5px;border:1.5px solid #bea67d;border-radius:8px;background:#fffaf0;color:#254c40;font-weight:800;font-size:11px;min-width:58px;max-height:40px;white-space:nowrap}
+.brush-thumb svg{width:30px;height:30px;flex:0 0 auto;overflow:visible}
+.brush-thumb.current{border:3px solid #2d725c;background:#d5f2e3}
+.brush-thumb.past{background:#e5e4df;color:#617269}
+
+/* v0.72: place game-specific options at the bottom of every play room.
+   The scene takes the newly released upper space without stretching its artwork. */
+#app:not([data-view="home"]) .play-mat{display:flex;flex-direction:column;min-height:0}
+#app:not([data-view="home"]) .play-mat>.play-toolbar{order:20;flex:0 0 auto;max-height:25%;overflow:auto;align-items:center}
+#app:not([data-view="home"]) .play-mat>#scene{order:0;flex:1 1 auto;min-height:0;height:0;width:100%}
+#app:not([data-view="home"]) .play-mat>.bubble-tracker{order:1;flex:0 0 auto}
+#app:not([data-view="home"]) .play-mat>.brush-thumbnails{order:2;flex:0 0 auto}
+#app:not([data-view="home"]) .play-mat>.play-navigation{order:30;flex:0 0 auto}
+#app:not([data-view="home"]) .play-mat>#celebrate,
+#app:not([data-view="home"]) .play-mat>#art-reward{z-index:4}
+/* Keep the bottom bar usable on short screens and in both orientations. */
+#app.short-play:not([data-view="home"]) .play-mat>.play-toolbar{max-height:30%;padding:2px 4px}
+#app:not([data-view="home"]) .play-mat>.play-toolbar #play-options{flex-wrap:wrap}
+
+
+/* v0.72: one-row game settings; use full horizontal width, scroll rather than wrap. */
+#app:not([data-view="home"]) .play-mat>.play-toolbar{display:flex;flex-wrap:nowrap;max-height:none;min-height:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;align-items:center;width:100%;gap:5px}
+#app:not([data-view="home"]) .play-toolbar #game-results{flex:0 0 auto;min-width:0;max-width:190px}
+#app:not([data-view="home"]) .play-toolbar #play-options{display:flex;flex:1 0 auto;flex-wrap:nowrap!important;justify-content:space-evenly;min-width:max-content;margin-left:0}
+#app:not([data-view="home"]) .play-toolbar #play-options .levels,
+#app:not([data-view="home"]) .play-toolbar #play-options .mode-switch{display:flex;flex-wrap:nowrap;white-space:nowrap;flex:0 0 auto}
+#app:not([data-view="home"]) .play-toolbar #play-options button{white-space:nowrap}
+/* Drawing choices remain available as touch targets in both art modes. */
+#app[data-view="brush"] .item-progress-strip .brush-choice{cursor:pointer;touch-action:manipulation;min-width:48px;min-height:42px;appearance:none;font-family:inherit}
+#app[data-view="brush"] .item-progress-strip .brush-choice:focus-visible{outline:3px solid #226eec;outline-offset:2px}
+/* Child-safe immersive mode: remove every on-page control except exit X. */
+#app.immersive .topbar,#app.immersive .companion-bar,#app.immersive .activity-heading,
+#app.immersive .play-toolbar,#app.immersive .play-navigation,
+#app.immersive .bubble-tracker,#app.immersive .brush-thumbnails{display:none!important}
+#app.immersive .play-mat{position:relative;overflow:hidden}
+#app.immersive .play-mat>#scene{order:0;flex:1 1 auto;min-height:0;height:100%;width:100%}
+#app.immersive #exit-play{display:flex!important;position:absolute;right:10px;top:10px;z-index:99;align-items:center;justify-content:center;width:48px;height:48px;min-width:48px;min-height:48px;border:3px solid #fff;border-radius:12px;background:#ffe17a;color:#173e35;font-size:32px;font-weight:900;line-height:1;pointer-events:auto;touch-action:manipulation;box-shadow:0 2px 8px #0007}
+#exit-play{display:none}
+
+/* v0.82 shared countryside backdrop: decorative only; never captures touches. */
+#app:not([data-view="home"]) .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat}
+#app[data-view="bubbles"] .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat}
+#app:not([data-view="home"]) #scene{background:transparent!important}
+</style>
+<style id="game-control-isolation-v84">
+/* Final cascade guard: never let generic display:flex override HTML hidden. */
+#app [hidden], #app [hidden] * { display:none !important; }
+/* Only the selected game may expose its controls. */
+#app[data-view="abacus"] .play-toolbar,
+#app[data-view="drag"] .play-toolbar,
+#app[data-view="slide"] .play-toolbar { display:none !important; }
+#app[data-view="brush"] #bubble-modes,
+#app[data-view="brush"] #bubble-settings,
+#app[data-view="brush"] #play-levels,
+#app[data-view="bubbles"] #brush-modes,
+#app[data-view="bubbles"] #art-tools,
+#app[data-view="bubbles"] #play-levels { display:none !important; }
+#app[data-view="home"] .play-toolbar { display:none !important; }
+
+/* v0.82 shared countryside backdrop: decorative only; never captures touches. */
+#app:not([data-view="home"]) .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat}
+#app[data-view="bubbles"] .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat}
+#app:not([data-view="home"]) #scene{background:transparent!important}
+</style>
+<style id="sana-sky-full-board-v84">
+/* The shared countryside belongs to the entire play mat, including navigation/control strips.
+   Keep these strips transparent so the same image is visible behind their buttons. */
+#app:not([data-view="home"]) .play-mat {
+  background: #b6df84 url('./train-art/farm-sky-v126.webp') center center / cover no-repeat !important;
+}
+#app:not([data-view="home"]) .play-mat > .play-navigation,
+#app:not([data-view="home"]) .play-mat > .play-toolbar {
+  background: transparent !important;
+}
+
+/* v1.17 — immersive controls: exit below progress thumbnails; vibration at
+   lower-right playroom corner, away from the Abacus bead rows. All games. */
+#app.immersive .play-mat #exit-play {
+  top:8px!important;right:8px!important;left:auto!important;
+  width:40px!important;min-width:40px!important;height:40px!important;
+  min-height:40px!important;z-index:110!important;
+}
+#app.immersive .play-mat:has(> .item-progress-strip:not([hidden])) #exit-play {
+  top:calc(48px + 8px)!important;
+}
+#app.immersive .play-mat #vibration-toggle {
+  top:auto!important;left:auto!important;right:12px!important;
+  bottom:max(12px,env(safe-area-inset-bottom))!important;
+  z-index:105!important;width:46px!important;height:46px!important;
+  min-width:46px!important;min-height:46px!important;
+}
+
+/* v1.17: fullscreen exit icon — transparent square-in-square, black outline.
+   Position within playroom below progress carousel; identical touch target to vibration. */
+#app.immersive .play-mat #exit-play {
+  position:absolute!important;top:3px!important;right:8px!important;left:auto!important;bottom:auto!important;
+  width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:5px!important;background:transparent!important;border:2px solid #111!important;
+  border-radius:10px!important;box-shadow:none!important;text-shadow:none!important;
+  color:#111!important;z-index:120!important;pointer-events:auto!important;
+}
+#app.immersive .play-mat:has(> .item-progress-strip:not([hidden])) #exit-play {top:3px!important;}
+#app.immersive .play-mat #exit-play svg{width:29px;height:29px;display:block;flex:none;}
+/* v1.17: exit stays BELOW the entire progress thumbnail band, not on top of it.
+   Reserve the row height plus a visible gap on every game and age. */
+#app.immersive .play-mat #exit-play,
+#app.immersive .play-mat:has(> .item-progress-strip:not([hidden])) #exit-play {
+  top:76px!important;right:8px!important;bottom:auto!important;
+}
+#app.immersive .play-mat:not(:has(> .item-progress-strip:not([hidden]))) #exit-play {top:12px!important;}
+
+#app[data-view="home"] #fullscreen{display:none!important;}
+</style>
+
+<style>/* v1.17: keep the immersive fullscreen toggle below the top-right controls */
+#app.immersive #fullscreen{top:calc(max(8px, env(safe-area-inset-top)) + 58px)!important;z-index:30}
+</style>
+<style>
+/* v1.17 trial: place the return-to-normal square directly ABOVE vibration in immersive mode. */
+#app.immersive .play-mat #exit-play,
+#app.immersive .play-mat:has(> .item-progress-strip:not([hidden])) #exit-play,
+#app.immersive .play-mat:not(:has(> .item-progress-strip:not([hidden]))) #exit-play {
+  position:absolute!important;
+  top:auto!important;
+  bottom:calc(max(12px,env(safe-area-inset-bottom)) + 46px + 12px)!important;
+  right:12px!important;
+  left:auto!important;
+  width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;
+  z-index:120!important;
+}
+</style>
+
+<style>/* v1.17 red exit-to-normal icon; preserve game-room position */
+#app.immersive .play-mat #exit-play {
+  color:#ed1c24!important;
+  border:3px solid #ed1c24!important;
+  background:#fff5f5!important;
+  box-shadow:0 2px 6px #0003!important;
+}
+#app.immersive .play-mat #exit-play svg {color:#ed1c24!important;stroke:#ed1c24!important;}
+</style>
+<style>/* v1.23: ten compact colour thumbnails, for Age 5 only. */
+#app[data-age="5"][data-view="abacus"] .play-mat>.item-progress-strip:not([hidden]){display:grid!important;grid-template-columns:repeat(10,minmax(0,1fr))!important;width:100%!important;gap:3px!important;padding:3px 5px!important;overflow:hidden!important;scroll-snap-type:none!important;touch-action:auto!important;box-sizing:border-box}
+#app[data-age="5"][data-view="abacus"] .play-mat>.item-progress-strip .item-chip{display:flex!important;flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:1px!important;width:auto!important;min-width:0!important;max-width:none!important;flex:initial!important;height:37px!important;padding:1px!important;white-space:nowrap!important;box-sizing:border-box}
+#app[data-age="5"][data-view="abacus"] .abacus-chip-label{font-size:clamp(9px,1.6vw,12px);line-height:1.05;font-weight:800}
+#app[data-age="5"][data-view="abacus"] .abacus-chip-value{font-size:13px;line-height:1.05;font-weight:900;display:flex;align-items:center;gap:3px}
+#app[data-age="5"][data-view="abacus"] .abacus-chip-value i{font-style:normal}
+#app[data-age="5"][data-view="abacus"] .item-chip.is-done::after{width:11px!important;height:11px!important;line-height:11px!important;font-size:9px!important;right:0!important;top:0!important}
+</style>
+<style>/* v1.26: the Age 4 train travels through green fields under blue sky. */
+#app:is([data-age="2"],[data-age="3"],[data-age="4"])[data-view="abacus"] .play-mat{background:#b6df84 url('./train-art/farm-sky-v126.webp') center center/cover no-repeat!important}
+#app:is([data-age="2"],[data-age="3"],[data-age="4"])[data-view="abacus"] #scene{background:transparent!important}
+</style>
+<style>
+#scene[data-art-state="loading"],#scene[data-art-state="error"]{visibility:hidden;pointer-events:none}
+#game-art-status{position:absolute;inset:45% auto auto 50%;transform:translate(-50%,-50%);max-width:85%;z-index:20;padding:12px 18px;background:#fff8dc;color:#214b3e;border:2px solid #9c7140;border-radius:14px;font-size:18px;font-weight:800;text-align:center;pointer-events:none}
+#game-art-status button{display:block;margin:8px auto 0;padding:8px 18px;background:#ffe17a;color:#214b3e;border:2px solid #80613b;border-radius:10px;font:inherit;pointer-events:auto}
+</style>
+<style>
+.object-feedback-scale{transform-box:view-box;transform-origin:0 0;animation:object-pop 300ms ease-out both}
+@keyframes object-pop{0%{transform:scale(1);opacity:1}45%{transform:scale(var(--pop-scale,1.5));opacity:1}75%{transform:scale(1.18);opacity:1}100%{transform:scale(1.05);opacity:0}}
+[data-object-feedback="train"] .object-feedback-scale{animation-name:number-enlarge}
+[data-object-feedback="shape"] .object-feedback-scale,[data-object-feedback="fruit"] .object-feedback-scale,[data-object-feedback="bead"] .object-feedback-scale{animation-name:object-settle}
+@keyframes object-settle{0%,90%{transform:scale(1);opacity:1}100%{transform:scale(1);opacity:0}}
+@keyframes number-enlarge{0%{transform:scale(1);opacity:1}40%,85%{transform:scale(var(--pop-scale));opacity:1}100%{transform:scale(var(--pop-scale));opacity:0}}
+.balloon-growing{transform-box:view-box;transform-origin:0 0;animation:balloon-enlarge 300ms ease-out both}
+@keyframes balloon-enlarge{0%{transform:scale(1)}50%,100%{transform:scale(1.35)}}
+.object-selection-pop{animation:selection-pop 300ms ease-out both}
+@keyframes selection-pop{0%,100%{transform:scale(1)}45%{transform:scale(1.15);box-shadow:0 0 0 4px #ffe17a}}
+@media(prefers-reduced-motion:reduce){.object-feedback-scale{animation:none!important;transform:scale(1.1)}.object-selection-pop{animation:none!important;outline:3px solid #e8b43c}}
+@media(prefers-reduced-motion:reduce){[data-object-feedback="train"] .object-feedback-scale{transform:scale(var(--pop-scale))}.balloon-growing{animation:none!important;transform:scale(1.15)}}
+@media(prefers-reduced-motion:reduce){[data-object-feedback="shape"] .object-feedback-scale,[data-object-feedback="fruit"] .object-feedback-scale,[data-object-feedback="bead"] .object-feedback-scale{transform:scale(1)}}
+</style>
+<style>/* v1.45: full green counting rooms and consistent fullscreen controls. */
+#fullscreen{background:#b3def0!important;color:#173e35!important;border-color:#a89a62!important}
+#app.immersive .play-mat #exit-play,
+#app.immersive .play-mat:has(> .item-progress-strip:not([hidden])) #exit-play,
+#app.immersive .play-mat:not(:has(> .item-progress-strip:not([hidden]))) #exit-play{background:#b3def0!important;color:#173e35!important;border-color:#a89a62!important;top:auto!important;bottom:max(12px,env(safe-area-inset-bottom))!important}
+#app.immersive .play-mat #exit-play svg{color:inherit!important;stroke:currentColor!important}
+#app.immersive .play-mat #vibration-toggle{bottom:max(12px,env(safe-area-inset-bottom))!important;right:70px!important}
+#app.immersive:not([data-view="home"]) .play-mat{padding-bottom:calc(max(12px,env(safe-area-inset-bottom)) + 46px)}
+</style>
+<style>/* v1.45: identify the running release without covering play. */
+.app-update-button .update-copy{display:flex;align-items:center;gap:5px}
+.app-update-button [data-update-label]{line-height:1.05}
+.app-update-button .update-version{font-size:11px;font-weight:800;line-height:1}
+.compact .app-update-button .update-copy{flex-direction:column;gap:1px}
+.compact .app-update-button .update-version{font-size:10px}
+.short-play:not([data-view="home"]) .app-update-button{padding-top:1px;padding-bottom:1px}
+.short-play .app-update-button .update-copy{gap:0}
+.short-play .app-update-button .update-version{font-size:9px}
+#play-version{display:none}
+#app.immersive #play-version{display:block;position:absolute;left:max(12px,env(safe-area-inset-left));bottom:max(12px,env(safe-area-inset-bottom));padding:3px 7px;border:1px solid #55756d;border-radius:7px;background:#fff8e9ed;color:#173e35;font-size:13px;font-weight:900;line-height:1.2;pointer-events:none;z-index:104}
+</style>
+<style>/* v1.45: centred captions with the countryside visible through their panels. */
+#app:not([data-view="home"]){background:#b6df84 url('./train-art/farm-sky-v126.webp') center/cover no-repeat}
+#app:not([data-view="home"]) .companion-bar,
+#app:not([data-view="home"]) .play-mat>.game-status-top,
+#app:not([data-view="home"]) .game-status-top #game-results,
+#app:not([data-view="home"]) .play-mat>.item-progress-strip:not([hidden]),
+#app:not([data-view="home"]) .play-mat>.item-progress-strip:not([hidden]) .item-chip,
+#app #art-reward,#app #game-art-status,#app #play-version,#app #sana-immersive-notice{background:transparent!important;box-shadow:none!important}
+#app:not([data-view="home"]) .game-status-top #game-results{justify-content:center;align-items:center;text-align:center}
+#app #hint,#app #game-art-status,#app #play-version{text-align:center}
+#app:not([data-view="home"]) .item-chip,
+#app #hint,#app #game-results,#app #art-reward,#app #game-art-status,#app #play-version,#app #sana-immersive-notice{text-shadow:1px 0 #fffbed,-1px 0 #fffbed,0 1px #fffbed,0 -1px #fffbed}
+#app .item-chip:has(.item-index){flex-direction:column;gap:0!important}
+#app .item-chip .item-index{position:static;background:transparent;padding:0;line-height:1}
+.scene-caption{paint-order:stroke fill;stroke:#fffbed;stroke-width:2;stroke-linejoin:round}
+</style>
+<style>/* v1.45: crisp lettering on small, fitted yellow tabs. */
+#app,#app *{text-shadow:none!important}
+#scene text{stroke:none!important;paint-order:normal!important;font-family:inherit;font-weight:700!important}
+#scene :is(.scene-caption,[data-color-label],[data-train-engine],[data-train-instruction],.target>text,[data-cave-object] text:last-child,[data-cave-door] text){fill:#173e35!important}
+#scene [data-text-panel]{fill:none!important;stroke:none!important}
+#app #activity-name,#app #result-score,#app #bubble-score,#app #hint-copy,
+#app #art-reward,#app #game-art-status,#app #play-version,#app #sana-immersive-notice{
+  background:var(--label-bg,#f5efdf)!important;color:#173e35!important;border:1px solid var(--label-edge,#ad9e83)!important;
+  border-radius:6px!important;box-shadow:none!important;font-weight:700!important;
+}
+#app #activity-name,#app #result-score,#app #bubble-score{flex:0 1 auto!important;padding:2px 6px!important;line-height:1.15!important}
+#app #result-score:empty,#app #bubble-score:empty{display:none!important}
+#app #hint-copy{padding:1px 5px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+#app #art-reward,#app #game-art-status{width:max-content;max-width:calc(100% - 24px);align-self:center}
+#app #play-version{width:max-content;padding:3px 6px}
+#app .play-mat>.item-progress-strip .item-chip{
+  justify-self:center!important;width:max-content!important;max-width:100%!important;
+  height:auto!important;min-height:28px!important;padding:3px clamp(1px,calc((var(--frame-w) - 70px) / var(--thumb-count,1) * .08),6px)!important;
+  background:var(--label-bg,#f5efdf)!important;color:#173e35!important;font-weight:700!important;opacity:1!important;
+}
+#app .play-mat>.item-progress-strip .item-chip.is-later{color:#526144!important}
+#app .play-mat>.item-progress-strip .item-chip.brush-choice{height:44px!important;min-height:44px!important}
+#app .play-mat>.item-progress-strip .item-chip:has(svg){padding:2px!important}
+#app[data-age="5"][data-view="abacus"] .play-mat>.item-progress-strip .item-chip{height:37px!important;min-height:37px!important;padding:2px 5px!important}
+#app .abacus-chip-label,#app .abacus-chip-value,#app .abacus-chip-value b{font-weight:700!important}
+#app :is(#item-progress-strip,[data-demo-progress]) .item-chip{background:var(--label-bg,#f5efdf)!important;border-color:var(--label-edge,#ad9e83)!important}
+#app[data-age="5"][data-view="abacus"] :is(#item-progress-strip,[data-demo-progress]) .item-chip.is-done{overflow:visible!important}
+#app[data-age="5"][data-view="abacus"] :is(#item-progress-strip,[data-demo-progress]) .item-chip.is-done::after{right:-5px!important;top:0!important;width:8px!important;height:8px!important;line-height:8px!important;font-size:7px!important}
+</style>
+<style>/* v1.45: coordinated pastel roles, reviewed against AI-generated previews. */
+#activity-name{--label-bg:#dfedf6;--label-edge:#7e9fb7}
+#result-score,#art-reward{--label-bg:#dcebdd;--label-edge:#8aa67a}
+#bubble-score{--label-bg:#e9e1f2;--label-edge:#a591b5}
+#game-art-status{--label-bg:#dfedf6;--label-edge:#7e9fb7}
+#hint-copy,#play-version,#sana-immersive-notice{--label-bg:#f5efdf;--label-edge:#ad9e83}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip:nth-child(5n+1){--label-bg:#dcebdd;--label-edge:#8aa67a}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip:nth-child(5n+2){--label-bg:#dfedf6;--label-edge:#7e9fb7}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip:nth-child(5n+3){--label-bg:#e9e1f2;--label-edge:#a591b5}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip:nth-child(5n+4){--label-bg:#f3dfd3;--label-edge:#b5927e}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip:nth-child(5n){--label-bg:#f5efdf;--label-edge:#ad9e83}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip.is-current{--label-bg:#c8e1ef;--label-edge:#497c96}
+:is(#item-progress-strip,[data-demo-progress]) .item-chip.is-done{--label-bg:#d7eadb;--label-edge:#5b8c68}
+</style>
+<style>/* v1.45: natural Abacus board and readable colour-matched counts. */
+#app #scene [data-color-label]{fill:var(--bead-ink)!important}
+#app #scene [data-abacus-left],#app #scene [data-abacus-right]{fill:#173e35!important}
+#app.immersive :is(#item-progress-strip,[data-demo-progress]) .item-chip{font-size:clamp(10px,calc((var(--frame-w) - 70px) / var(--thumb-count,1) * .6 * 1.12),20.16px)!important}
+#app.immersive[data-age="5"][data-view="abacus"] .abacus-chip-label{font-size:clamp(10.08px,1.792vw,13.44px)!important}
+#app.immersive[data-age="5"][data-view="abacus"] .abacus-chip-value{font-size:14.56px!important}
+#app.immersive :is(#item-progress-strip,[data-demo-progress]) .item-index{font-size:10.08px!important}
+</style>
+<style>/* v1.79: match Age 5 Abacus title tabs to Results and keep all ten status tabs equal width. */
+#app[data-age="5"][data-view="abacus"] #item-progress-strip:not([hidden]){grid-template-columns:repeat(10,minmax(0,1fr))!important}
+#app[data-age="5"][data-view="abacus"] #item-progress-strip:not([hidden]) .item-chip{justify-self:stretch!important;width:100%!important;min-width:0!important;max-width:none!important;flex:initial!important}
+#app[data-age="5"][data-view="abacus"] #item-progress-strip:not([hidden]) .abacus-chip-label{max-width:100%;overflow:hidden;text-overflow:clip}
+#app[data-age="5"][data-view="abacus"] #item-progress-strip:not([hidden]) .abacus-chip-value{justify-content:center;white-space:nowrap}
+</style>
+<style>/* v1.45: bubble content tabs identify selection through their fill. */
+#app #bubble-modes [data-bubble-mode]{background:#bbe5c4!important;color:#173e35!important;border-color:#709e79!important}
+#app #bubble-modes [data-bubble-mode][aria-pressed="true"]{background:#ffe17a!important;border-color:#926600!important;box-shadow:inset 0 0 0 1px #926600!important}
+#app #scene [data-slide-peek]:focus-visible{outline:3px solid #21658a;outline-offset:3px}
+</style>
+<style>/* Keep art controls in their own room and give empty rows back to play. */
+#app:not([data-view="brush"]) #activity-view .play-mat>.play-toolbar{display:none!important;min-height:0!important;padding:0!important;border:0!important;margin:0!important}
+#app #activity-view #brush-modes[hidden],#app #activity-view #paint-tools[hidden],#app #activity-view #art-tools[hidden]{display:none!important}
+#app:is([data-view="drag"],[data-view="slide"],[data-view="abacus"]) #activity-view{grid-template-rows:minmax(0,1fr);grid-template-areas:"board";gap:0}
+</style>
+<style>
+.demo-balloon-splash{transform-box:fill-box;transform-origin:center;animation:demo-balloon-splash .55s ease-out forwards}
+@keyframes demo-balloon-splash{from{opacity:1;transform:scale(.65)}to{opacity:0;transform:scale(1.35)}}
+@media(prefers-reduced-motion:reduce){.demo-balloon-splash{animation:none}}
+#app [data-demo-progress] .item-chip.is-demo-done{overflow:visible!important}
+</style>
+<style>/* Art controls travel with the playfield; thumbnails keep their existing states. */
+#app #scene [data-label-for="slide-peek"]{fill:#fff4d6!important}
+#app[data-view="brush"] #art-tools{min-width:0;max-width:100%;gap:12px;padding:4px 6px;margin:0 4px;border:1px solid #93aa88;border-radius:10px;background:#f1f5e6eb}
+#app[data-view="brush"] #paint-tools{min-height:0;gap:6px;flex-wrap:nowrap}
+#app[data-view="brush"] .paint-color{width:32px;height:32px;flex:none;border-width:3px;background:radial-gradient(circle at 30% 24%,#ffffffd9 0 8%,transparent 47%),var(--paint)}
+#app #erase-paint svg{display:none;width:18px;height:18px}
+#app.immersive[data-view="brush"] #activity-view{grid-template-areas:"board";grid-template-rows:minmax(0,1fr);gap:0}
+#app.immersive[data-view="brush"] .play-mat>#art-tools{display:flex!important;position:relative;order:-4;flex:0 0 auto;align-self:stretch;z-index:2;margin:4px 8px;justify-content:center}
+#app.narrow[data-view="brush"] #art-tools{gap:4px;padding:3px 4px}
+#app.narrow[data-view="brush"] #art-tools .paint-label{display:none}
+#app.narrow[data-view="brush"] #art-tools .art-tool{min-height:32px;padding:3px 4px;font-size:12px}
+#app.narrow[data-view="brush"] #art-tools .paint-color{width:30px;height:30px}
+#app.narrow[data-view="brush"] #art-tools .paint-tools{gap:3px}
+#app.narrow[data-view="brush"] #erase-paint{width:32px;display:grid;place-items:center}
+#app.narrow[data-view="brush"] #erase-paint span{display:none}
+#app.narrow[data-view="brush"] #erase-paint svg{display:block}
+#app :is(#item-progress-strip,[data-demo-progress]) .item-chip{isolation:isolate;box-shadow:inset 0 1px 0 #ffffffd9,inset 0 -2px 2px #2d503414,0 1px 2px #264b371f!important}
+#app .item-chip::before{content:"";position:absolute;inset:1px;z-index:-1;border-radius:inherit;background:linear-gradient(155deg,#ffffffb8 0%,#ffffff35 38%,transparent 40%);pointer-events:none}
+#app .item-chip.is-done::after{z-index:2}
+#app .abacus-thumb-bead{display:inline-block;width:8px;height:8px;border-radius:50%;border:1px solid #28483e55;background:radial-gradient(circle at 28% 22%,white 0 8%,var(--bead) 48% 75%,#0003 100%);font-size:0;vertical-align:baseline}
+</style>
+<link rel="stylesheet" href="parent-guide.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="glossy-blocks.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute;overflow:hidden" aria-hidden="true"><defs>
+<symbol id="monkey" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#f3d56f"/><circle cx="21" cy="49" r="16" fill="#96634f"/><circle cx="79" cy="49" r="16" fill="#96634f"/><circle cx="21" cy="49" r="9" fill="#f2b5a0"/><circle cx="79" cy="49" r="9" fill="#f2b5a0"/><path d="M20 48Q20 13 50 17Q82 13 81 49L75 71Q50 88 25 71Z" fill="#96634f"/><path d="M28 42Q29 25 48 37Q67 23 74 43L73 67Q50 84 28 66Z" fill="#f7d2b3"/><circle cx="38" cy="47" r="4" fill="#293f35"/><circle cx="63" cy="47" r="4" fill="#293f35"/><circle cx="37" cy="46" r="1.3" fill="white"/><circle cx="62" cy="46" r="1.3" fill="white"/><ellipse cx="50" cy="58" rx="5" ry="3.5" fill="#b87d64"/><path d="M38 65Q50 77 63 65" stroke="#775044" fill="none" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="29" cy="59" rx="6" ry="4" fill="#eeac94"/><ellipse cx="72" cy="59" rx="6" ry="4" fill="#eeac94"/><path d="M45 18Q35 3 52 8Q61 5 60 17" fill="#96634f"/></symbol>
+<symbol id="back-icon" viewBox="0 0 32 32"><path d="M18 6L8 16L18 26M8 16H28" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="home-icon" viewBox="0 0 32 32"><path d="M4 15L16 5L28 15M8 13V27H24V13M13 27V19H19V27" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+<symbol id="sound-icon" viewBox="0 0 32 32"><path d="M5 12H11L18 6V26L11 20H5Z" fill="currentColor"/><path d="M22 11Q28 16 22 21M26 7Q35 16 26 25" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol>
+<symbol id="fullscreen-icon" viewBox="0 0 32 32"><path d="M4 12V5H11M21 5H28V12M28 21V28H21M11 28H4V21" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="exit-fullscreen-icon" viewBox="0 0 32 32"><path d="M11 4V11H4M28 11H21V4M21 28V21H28M4 21H11V28" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="again-icon" viewBox="0 0 32 32"><path d="M8 10A11 11 0 1 1 5 20M8 3V11H16" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="hand-icon" viewBox="0 0 32 32"><path d="M11 17V7Q11 3 15 4Q17 4 17 7V16L20 13L26 16Q29 18 27 24L23 29H14L6 20Q4 16 7 15Z" fill="currentColor" opacity=".85"/></symbol>
+</defs></svg>
+<div id="viewport"><div id="app" data-view="home">
+<header class="topbar has-app-update">
+  <button class="icon-button" id="home" type="button" aria-label="Home"><svg aria-hidden="true"><use href="#home-icon"/></svg></button>
+  <a class="brand" href="index.html" aria-label="SaNaToddler welcome" style="color:inherit;text-decoration:none"><svg class="brand-mark" aria-hidden="true"><use href="#monkey"/></svg><div class="brand-copy"><div class="wordmark">SaNa</div><small>little hands · beta</small></div></a><button class="app-update-button" id="update-app" type="button" aria-label="Update app" aria-busy="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7V3M20 7H16M20 7A8 8 0 1 0 21 14"/></svg><span class="update-copy"><span data-update-label>Update</span><span class="update-version" data-release-version>v1.99</span></span></button>
+  <div class="parent-age" role="radiogroup" aria-label="Choose age"><span>Age:</span><button type="button" class="age-radio" data-age-option="2" role="radio" aria-checked="false">2</button><button type="button" class="age-radio" data-age-option="3" role="radio" aria-checked="false">3</button><button type="button" class="age-radio" data-age-option="4" role="radio" aria-checked="false">4</button><button type="button" class="age-radio" data-age-option="5" role="radio" aria-checked="false">5</button></div>
+
+  <nav class="game-pages" id="game-pages" aria-label="Browse game cards"><button class="icon-button" id="previous-games" type="button" aria-label="Previous games" aria-controls="activity-grid" disabled><svg aria-hidden="true"><use href="#back-icon"/></svg></button><span class="visually-hidden" id="card-page" aria-live="polite"></span><button class="icon-button" id="next-games" type="button" aria-label="Next games" aria-controls="activity-grid"><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#back-icon" transform="translate(32 0) scale(-1 1)"/></svg></button></nav>
+  <button class="icon-button" id="sound" type="button" aria-label="Sound off" aria-pressed="false"><svg aria-hidden="true"><use href="#sound-icon"/></svg></button>
+  <button class="icon-button" id="music-toggle" type="button" aria-label="Background music off" aria-pressed="false" title="Background music"><svg aria-hidden="true" viewBox="0 0 32 32"><path fill="currentColor" d="M13 7v17a5 5 0 1 1-2.6-4.4V10l15-4v14a5 5 0 1 1-2.6-4.4V3Z"/></svg></button>
+  <button class="icon-button" id="vibration-toggle" type="button" aria-label="Vibration on" aria-pressed="true" title="Vibration ON">▥</button>
+  <button class="icon-button" id="fullscreen" type="button" aria-label="Fullscreen" aria-pressed="false" title="Fullscreen"><svg aria-hidden="true"><use href="#fullscreen-icon"/></svg></button>
+</header>
+<aside class="companion-bar" aria-label="SaNa tips and actions">
+  <div class="sana-badge" aria-hidden="true"><svg><use href="#monkey"/></svg><small>SaNa</small></div>
+  <div id="hint" role="status" aria-live="polite" aria-atomic="true"><span id="hint-copy">Choose a picture. I’ll play with you!</span></div>
+  <div class="progress" id="progress" aria-label="Activity progress" hidden></div>
+  <div class="glossy-quick-actions" role="group" aria-label="Block building actions" hidden></div>
+  <button class="soft-button secondary" id="show-me" type="button" aria-label="Demo" hidden><svg aria-hidden="true"><use href="#hand-icon"/></svg><span class="button-label">Demo</span></button>
+  <button class="soft-button" id="again" type="button" aria-label="Again" hidden><svg aria-hidden="true"><use href="#again-icon"/></svg><span class="button-label">Again</span></button>
+  <button id="first-games" type="button" aria-controls="activity-grid" aria-describedby="card-page" title="Return to the first game" disabled><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#back-icon"/></svg><span>Back to first game</span></button>
+  <button id="more-games" type="button" aria-controls="activity-grid" aria-describedby="card-page" title="Slide the game row to find more games"><span id="more-games-label">Go for new games</span><svg aria-hidden="true" viewBox="0 0 32 32"><use href="#back-icon" transform="translate(32 0) scale(-1 1)"/></svg></button>
+</aside>
+<main id="home-view">
+  <div class="welcome"><h1>Come, let’s play.</h1><p>Curious fingers. Wonderful little discoveries.</p></div>
+  <div class="activity-grid" id="activity-grid" role="region" aria-label="Choose from six games" tabindex="0"></div>
+</main>
+<main id="activity-view" hidden>
+  <span id="step-note" hidden></span>
+  <div class="bubble-settings" id="bubble-settings" hidden><div class="bubble-setting-group" role="group" aria-label="Bubble speed"><span>Speed</span><button type="button" data-bubble-speed="slow" aria-label="Slow bubble speed" aria-pressed="false">Slow</button><button type="button" data-bubble-speed="medium" aria-label="Medium bubble speed" aria-pressed="true">Medium</button><button type="button" data-bubble-speed="fast" aria-label="High bubble speed" aria-pressed="false">High</button></div><div class="bubble-setting-group" role="group" aria-label="Bubble size"><span>Size</span><button type="button" data-bubble-size="small" aria-label="Small bubbles" aria-pressed="false">Small</button><button type="button" data-bubble-size="medium" aria-label="Medium bubbles" aria-pressed="true">Medium</button><button type="button" data-bubble-size="large" aria-label="Large bubbles" aria-pressed="false">Large</button></div><button type="button" class="mode-button" id="bubble-full-set" aria-label="Full bubble collection" aria-pressed="false" hidden>Full set</button></div>
+  <div class="art-tools" id="art-tools" hidden><div class="brush-sizes" role="group" aria-label="Brush size"><span class="paint-label">Brush</span><button class="art-tool" type="button" data-brush-size="small" aria-label="Small brush" aria-pressed="false">Small</button><button class="art-tool" type="button" data-brush-size="medium" aria-label="Medium brush" aria-pressed="true">Medium</button><button class="art-tool" type="button" data-brush-size="large" aria-label="Large brush" aria-pressed="false">Large</button></div><div class="paint-tools" id="paint-tools" role="group" hidden><span class="paint-label">Color</span><button class="art-tool" type="button" id="erase-paint" aria-label="Erase paint" title="Eraser" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14 13 4a2 2 0 0 1 3 0l5 5a2 2 0 0 1 0 3l-8 9H9Z" fill="#efa497" stroke="#385b4d" stroke-width="1.8"/><path d="m7 11 8 8-2 2H9l-5-7Z" fill="#fff9e9" stroke="#385b4d" stroke-width="1.5"/></svg><span>Eraser</span></button></div></div>
+  <div class="play-mat"><span id="play-version" data-release-version>v1.99</span><div id="game-status-top" class="game-status-top" aria-label="Current game status"></div><button id="exit-play" type="button" aria-label="Exit fullscreen play" title="Exit fullscreen"><svg aria-hidden="true" viewBox="0 0 32 32" width="28" height="28"><rect x="4" y="4" width="24" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><rect x="10" y="10" width="12" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button><div class="play-toolbar"><div id="game-results" aria-label="Game results" aria-live="polite"><h1 id="activity-name">Shape picnic</h1><span id="result-score"></span><span class="bubble-score" id="bubble-score" hidden></span></div><div id="play-options" aria-label="Sub-levels"><div class="levels" id="play-levels" role="group" aria-label="Difficulty level">
+    <button class="level" type="button" data-level="1" aria-label="Easy level" aria-pressed="false">Easy<small>little steps</small></button>
+    <button class="level" type="button" data-level="2" aria-label="Medium level" aria-pressed="true">Medium<small>guided play</small></button>
+    <button class="level" type="button" data-level="3" aria-label="Challenge level" aria-pressed="false">Challenge<small>extra fun</small></button>
+  </div><span id="abacus-stage" hidden>0–10 · Any row</span><div class="mode-switch" id="bubble-modes" role="group" aria-label="Bubble contents" hidden><button type="button" class="mode-button" data-bubble-mode="plain" aria-label="Plain bubbles" aria-pressed="true">Plain</button><button type="button" class="mode-button" data-bubble-mode="numbers" aria-label="Number bubbles" aria-pressed="false">1–20</button><button type="button" class="mode-button" data-bubble-mode="letters" aria-label="Letter bubbles" aria-pressed="false">A–Z</button><button type="button" class="mode-button" data-bubble-mode="shapes" aria-label="Shape bubbles" aria-pressed="false">Shapes</button></div><div class="mode-switch" id="brush-modes" hidden><button type="button" class="mode-button" id="clean-mode" aria-label="Brush clean" aria-pressed="true">💧 Brush clean</button><button type="button" class="mode-button" id="paint-mode" aria-label="Finger paint" aria-pressed="false">🎨 Finger paint</button></div></div></div><div class="bubble-tracker" id="bubble-tracker" hidden><div class="bubble-targets" id="bubble-targets" role="list" aria-label="Bubble collection"></div></div><div id="item-progress-strip" class="item-progress-strip" role="list" aria-label="Available items and completion status" hidden></div><div id="brush-thumbnails" class="brush-thumbnails" role="list" aria-label="Drawing picture sequence" hidden></div><svg id="scene" viewBox="0 0 1000 440" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Play area"></svg><div id="game-art-status" role="status" aria-live="polite" hidden><span>Getting your game ready…</span><button type="button" id="game-art-retry" hidden>Try again</button></div><nav class="play-navigation" aria-label="Game and sub-level navigation"><button class="soft-button" id="game-back" type="button" aria-label="Back"><svg aria-hidden="true"><use href="#back-icon"/></svg><span>Back</span></button><div id="game-mid-controls"><button class="soft-button" id="game-home" type="button" aria-label="Games"><svg aria-hidden="true"><use href="#home-icon"/></svg><span>Games</span></button></div><button class="soft-button" id="game-front" type="button" aria-label="Front"><span>Front</span><svg viewBox="0 0 32 32" aria-hidden="true"><use href="#back-icon" transform="translate(32 0) scale(-1 1)"/></svg></button></nav><div id="celebrate" hidden aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div><div id="art-reward" hidden><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#monkey"/></svg> 👏<b>Congratulations!</b>Love from SaNa</div></div>
+</main>
+
+</div></div>
+<script>
+(()=>{const status=document.getElementById("game-results"),slot=document.getElementById("game-status-top");if(status&&slot)slot.appendChild(status);})();
+</script>
+<script src="age-profiles.js"></script>
+<script src="picture-puzzle.js"></script>
+<script src="shape-library.js"></script>
+<script src="glossy-catalogue.js"></script>
+<script src="glossy-blocks.js"></script>
+<script src="app.js?v198"></script>
+<script src="parent-guide.js"></script>
+<script src="pwa.js?v199-live"></script>
+<script>
+/* v1.04 beta: Web Audio buffer playback avoids HTMLMediaElement media cards.
+   Preserve existing sound-master/music preference semantics. */
+(()=>{'use strict';
+const button=document.getElementById('music-toggle');
+const track='./bgm-sana-v86.mp3';
+let enabled=false;
+try{enabled=localStorage.getItem('sanaMusicV1')==='on';}catch(e){}
+let master=document.getElementById('sound').getAttribute('aria-pressed')==='true';
+let context=null,buffer=null,source=null,gain=null,loading=null,offset=0,startedAt=0;
+let generation=0;
+function sync(){button.setAttribute('aria-pressed',String(enabled));button.setAttribute('aria-label',enabled?'Background music on':'Background music off');button.title=enabled?'Turn background music off':'Turn background music on';button.style.opacity='1';}
+function desired(){return master&&enabled&&!document.hidden;}
+function stop(){
+  generation++;
+  if(source){if(context&&buffer)offset=(offset+Math.max(0,context.currentTime-startedAt))%buffer.duration;try{source.stop();}catch(e){}try{source.disconnect();}catch(e){}source=null;}
+}
+async function load(){
+  if(buffer)return buffer;
+  if(!loading)loading=(async()=>{
+    const response=await fetch(track);
+    if(!response.ok)throw new Error('Music unavailable');
+    const bytes=await response.arrayBuffer();
+    if(!context)throw new Error('Audio context unavailable');
+    buffer=await context.decodeAudioData(bytes);
+    return buffer;
+  })().catch(error=>{loading=null;throw error;});
+  return loading;
+}
+async function play(){
+  if(!desired()){stop();return;}
+  if(source)return;
+  const token=++generation;
+  try{
+    const AudioContextClass=window.AudioContext||window.webkitAudioContext;
+    if(!AudioContextClass)return;
+    if(!context){context=new AudioContextClass();gain=context.createGain();gain.gain.value=0.72;gain.connect(context.destination);}
+    await context.resume();
+    await load();
+    if(token!==generation||!desired()||source)return;
+    const node=context.createBufferSource();node.buffer=buffer;node.loop=true;node.connect(gain);
+    startedAt=context.currentTime;node.start(0,offset%buffer.duration);source=node;
+  }catch(error){/* Audio is optional; no HTML audio fallback that would recreate the notification. */}
+}
+function update(){if(desired())void play();else stop();}
+button.addEventListener('click',()=>{enabled=!enabled;try{localStorage.setItem('sanaMusicV1',enabled?'on':'off');}catch(e){}sync();update();});
+window.addEventListener('sana-sound-change',event=>{master=Boolean(event.detail?.enabled);update();});
+document.addEventListener('visibilitychange',update);
+window.addEventListener('pagehide',stop);
+document.addEventListener('freeze',stop);
+document.addEventListener('pointerdown',()=>{if(desired())void play();},{passive:true});
+sync();
+})();
+</script>
+</body>
+</html>

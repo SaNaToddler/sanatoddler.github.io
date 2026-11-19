@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#51409a">
+<title>SaNaToddler</title>
+<meta name="description" content="Tap puppy → Open in browser → Install → Accept. If asked to scan, accept and wait, then proceed. Tap to play.">
+<link rel="canonical" href="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/index.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SaNaToddler">
+<meta property="og:title" content="SaNaToddler">
+<meta property="og:description" content="Tap puppy → Open in browser → Install → Accept. If asked to scan, accept and wait, then proceed. Tap to play.">
+<meta property="og:url" content="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/index.html">
+<meta property="og:image" content="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/sana-puppy-green-r2-v199-512.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="SaNa the puppy with a pink and blue bow, the Little Hands app mascot.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SaNaToddler">
+<meta name="twitter:description" content="Tap puppy → Open in browser → Install → Accept. If asked to scan, accept and wait, then proceed. Tap to play.">
+<meta name="twitter:image" content="https://kidsmathsmatrixpuzzle.github.io/toddler-games-/sana-puppy-green-r2-v199-512.png">
+<meta name="twitter:image:alt" content="SaNa the puppy with a pink and blue bow, the Little Hands app mascot.">
+<style>
+:root{font-family:"Trebuchet MS","Arial Rounded MT Bold",ui-rounded,system-ui,sans-serif;color:#fff9ed;color-scheme:light}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#343279;touch-action:pan-x pan-y;overscroll-behavior:none}
+button,a{font:inherit;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+button{cursor:pointer}a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:4px solid #fff;outline-offset:5px}
+[hidden]{display:none!important}
+#frame,#frame *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-user-drag:none}
+#frame{--w:100vw;--h:100dvh;position:absolute;left:50%;top:50%;width:var(--w);height:var(--h);transform:translate(-50%,-50%);overflow:hidden;background:radial-gradient(58% 42% at 18% 16%,#ff5fa8 0,transparent 70%),radial-gradient(64% 46% at 84% 24%,#35d9f0 0,transparent 72%),radial-gradient(70% 50% at 26% 88%,#48e0f2 0,transparent 70%),radial-gradient(66% 48% at 88% 84%,#ff3d86 0,transparent 72%),linear-gradient(160deg,#c13fb0,#7e4bd4);display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding:25px 4.5% 20px;isolation:isolate}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:22px;font-weight:900;color:#fff5e8}
+.family{display:flex;align-items:center;gap:9px}.family span{font-size:34px}.preview-tag{padding:7px 13px;border:1px solid #ffffff50;border-radius:30px;background:#43307945;font-size:12px}
+.release-tools{display:flex;align-items:center;gap:8px;flex-shrink:0}.update-button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;min-width:128px;padding:8px 13px;border:2px solid #fff4ca;border-radius:14px;background:#ffe17a;color:#422b17;font-size:16px;font-weight:900}.update-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.update-button:disabled{opacity:.8;cursor:progress}.compact .update-button{font-size:14px;min-width:116px;padding:7px 10px}.small .update-button{font-size:13px;min-width:110px}.small .release-tools{gap:5px}
+.hero{min-height:0;display:grid;grid-template-columns:43% 57%;align-items:center;gap:0;width:100%;max-width:1360px;margin:auto}
+.mascot-space{position:relative;min-width:0;align-self:stretch;display:grid;place-items:center;padding-right:22px}
+.mascot-art{width:100%;max-width:460px;max-height:100%;overflow:visible;filter:drop-shadow(0 20px 16px #25175138)}
+.mascot-float{animation:bob 3.8s ease-in-out infinite;transform-origin:210px 220px}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.sana-says{position:absolute;top:6%;left:12%;margin:0;padding:12px 22px;background:#fff8eb;color:#65416a;font-size:18px;font-weight:900;border-radius:24px 24px 24px 4px;box-shadow:0 5px 0 #4a277d25;transform:rotate(-4deg)}
+.copy{min-width:0;padding:12px 0 14px 20px}
+h1{font-size:clamp(40px,5.4vw,78px);letter-spacing:-2.5px;line-height:1.02;margin:0;text-shadow:0 5px 0 #37245e35;font-weight:900}
+h1 span{display:block;font-size:.62em;letter-spacing:-.8px;margin-bottom:8px;color:#ffe59b}
+.tagline{font-size:clamp(15px,1.65vw,23px);line-height:1.45;margin:18px 0 23px;color:#fff4e8}
+.actions{display:grid;grid-template-columns:1.38fr 1fr;gap:14px;max-width:600px}
+.play-button,.install-button{min-height:72px;display:flex;justify-content:center;align-items:center;gap:10px;padding:12px 18px;border-radius:40px;font-size:clamp(17px,2vw,27px);font-weight:900;white-space:nowrap}
+.play-button{color:#422b17;background:linear-gradient(#ffe48d,#ffc347);border:2px solid #ffe8a0;box-shadow:0 8px 0 #765079,0 14px 20px #2e206634}
+.play-button svg{width:24px;height:24px;fill:currentColor}
+.install-button{color:#0b3f59;background:#54d3f3;border:2px solid #d9faff;box-shadow:0 6px 0 #426398}
+.install-button svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.play-button:active,.install-button:active{transform:translateY(4px);box-shadow:0 2px 0 #644275}
+.parent-note{max-width:600px;margin:23px 0 0;padding:14px 18px;border:1px solid #ffffff70;border-radius:18px;background:#33276269;line-height:1.5;font-size:14px}
+.parent-note strong{display:block;font-size:15px;color:#ffe49a;margin-bottom:3px}.parent-note p{margin:0}
+.bottomline{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:18px;font-weight:900;color:#fff6e9;padding-top:10px}
+.bottomline p{margin:0;opacity:1}.about-button{background:#32236157;color:#fff8eb;border:1px solid #ffffff70;border-radius:28px;padding:11px 22px;font-weight:800;min-height:44px}
+.dialog-shade{position:absolute;inset:0;z-index:4;background:#22204a99;display:grid;place-items:center;padding:22px}
+.dialog-panel{color:#3c3452;background:#fff8e9;border:3px solid #ffe18c;border-radius:27px;width:min(560px,86%);max-height:100%;overflow:auto;padding:26px 30px;box-shadow:0 20px 70px #17143355}
+.dialog-panel:focus{outline:none}.dialog-panel h2{margin:0 0 13px;font-size:27px;letter-spacing:-.6px}.dialog-panel p{font-size:17px;line-height:1.55;margin:10px 0}.dialog-panel button{display:block;margin:20px 0 0 auto;background:#563f8c;color:white;min-height:46px;border:0;border-radius:24px;padding:10px 26px;font-weight:800}
+#frame.compact{padding:15px 4% 12px}.compact .topline{font-size:16px}.compact .family span{font-size:26px}.compact .preview-tag{font-size:10px;padding:5px 10px}.compact .hero{grid-template-columns:40% 60%}.compact .mascot-space{padding-right:12px}.compact .sana-says{font-size:13px;padding:8px 15px;top:3%;left:9%}.compact .copy{padding:6px 0 6px 13px}.compact h1{font-size:44px;letter-spacing:-1.5px}.compact h1 span{font-size:28px;margin-bottom:5px;letter-spacing:-.5px}.compact .tagline{font-size:14px;margin:9px 0 14px}.compact .actions{gap:10px}.compact .play-button,.compact .install-button{min-height:52px;padding:8px 12px;font-size:18px;gap:7px}.compact .play-button svg,.compact .install-button svg{width:20px;height:20px}.compact .parent-note{margin-top:16px;padding:9px 13px;font-size:11px;line-height:1.4;border-radius:14px}.compact .parent-note strong{font-size:12px;margin-bottom:2px}.compact .bottomline{font-size:14px;padding-top:3px}.compact .about-button{padding:8px 18px;font-size:11px;min-height:40px}.compact .dialog-panel{padding:20px 25px;max-width:510px}.compact .dialog-panel h2{font-size:23px}.compact .dialog-panel p{font-size:15px;margin:7px 0}.compact .dialog-panel button{margin-top:13px}
+#frame.small{padding:10px 3% 8px}.small .hero{grid-template-columns:36% 64%}.small .copy{padding-left:10px}.small h1{font-size:36px}.small h1 span{font-size:28px}.small .tagline{font-size:12px;margin:7px 0 10px}.small .sana-says{font-size:11px;left:3%;padding:7px 12px}.small .actions{gap:8px}.small .play-button,.small .install-button{font-size:15px;min-height:46px;padding:7px 10px}.small .parent-note{margin-top:12px;font-size:10px;padding:8px 11px}.small .parent-note strong{font-size:11px}.small .bottomline p{font-size:14px}.small .about-button{font-size:10px;padding:7px 12px}
+.dialog-shade:has(.about-dialog){align-items:end;padding:14px}
+.dialog-panel.about-dialog{position:relative;display:flex;flex-direction:column;width:min(900px,98%);max-width:none;max-height:100%;padding:18px 20px;color:#382a1d;background:#f4e5c6;border-color:#f4e5c6;overflow:hidden}
+.about-dialog #dialog-title{font-size:25px;padding-right:60px;flex:0 0 auto;margin-bottom:14px}
+.about-dialog #dialog-copy{min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 2px 4px}
+.about-dialog #close-dialog{position:absolute;right:14px;top:10px;margin:0;width:46px;height:46px;min-height:46px;padding:0;border-radius:14px;background:#8b5b2e;font-size:30px}
+.about-card{background:#fff7e8;border-radius:22px;padding:18px 22px;margin-bottom:14px;text-align:center;box-shadow:0 4px 0 #c7b89b;font-size:17px;font-weight:800;line-height:1.5}
+.about-card h3{font-size:30px;line-height:1.2;margin:0 0 8px;color:#693210}.about-card p{font-size:17px;line-height:1.5;margin:8px 0}.about-card .about-quote{font-size:20px;font-style:italic;color:#a13912;font-weight:900}
+.about-card.safety{border-left:5px solid #a13912;color:#693210;font-weight:900}.about-card a{color:#11608a;text-decoration:underline}.about-version{display:block;font-size:14px;color:#67503a;margin-top:6px}.compact .about-card{padding:14px 18px;font-size:16px}.compact .about-card p{font-size:16px}.compact .about-card h3{font-size:26px}
+#frame{--welcome-safe-top:env(safe-area-inset-top,0px);--welcome-safe-right:env(safe-area-inset-right,0px);--welcome-safe-bottom:env(safe-area-inset-bottom,0px);--welcome-safe-left:env(safe-area-inset-left,0px)}
+#frame.portrait-rotated{transform:translate(-50%,-50%) rotate(var(--welcome-turn,-90deg)) scale(var(--welcome-scale,1));--welcome-safe-top:env(safe-area-inset-left,0px);--welcome-safe-right:env(safe-area-inset-top,0px);--welcome-safe-bottom:env(safe-area-inset-right,0px);--welcome-safe-left:env(safe-area-inset-bottom,0px)}
+#frame.portrait-rotated[data-turn="90"]{--welcome-safe-top:env(safe-area-inset-right,0px);--welcome-safe-right:env(safe-area-inset-bottom,0px);--welcome-safe-bottom:env(safe-area-inset-left,0px);--welcome-safe-left:env(safe-area-inset-top,0px)}
+/* Phone welcome stays portrait even with a stale installed landscape setting. */
+  #frame.portrait-welcome,#frame.portrait-welcome.small,#frame.portrait-welcome.compact{padding:max(16px,var(--welcome-safe-top)) max(16px,var(--welcome-safe-right)) max(16px,var(--welcome-safe-bottom)) max(16px,var(--welcome-safe-left));gap:12px;overflow-y:auto;overscroll-behavior:contain;grid-template-rows:auto minmax(min-content,1fr) auto}
+  #frame.portrait-welcome .topline{flex-direction:column;gap:8px;font-size:18px;align-items:stretch}#frame.portrait-welcome .family{justify-content:center}#frame.portrait-welcome .family span{font-size:30px}
+  #frame.portrait-welcome .release-tools{justify-content:center;gap:12px}#frame.portrait-welcome .preview-tag{font-size:11px}#frame.portrait-welcome .update-button{min-height:42px;min-width:124px;font-size:15px}
+  #frame.portrait-welcome .hero{display:flex;flex-direction:column;justify-content:center;gap:4px;min-height:min-content}
+  #frame.portrait-welcome .mascot-space{flex:1;align-self:center;width:min(78%,290px);height:180px;min-height:100px;max-height:220px;padding:0}
+  #frame.portrait-welcome .mascot-art{width:100%;height:100%;max-height:220px}#frame.portrait-welcome .sana-says{font-size:13px;padding:7px 12px;top:0;left:0}
+  #frame.portrait-welcome .copy{width:100%;padding:0;text-align:center}#frame.portrait-welcome h1{font-size:clamp(36px,calc(var(--w) * .1),54px);letter-spacing:-1.5px}#frame.portrait-welcome h1 span{font-size:28px;margin-bottom:3px}
+  #frame.portrait-welcome .tagline{font-size:16px;line-height:1.35;margin:9px 0 15px}#frame.portrait-welcome .actions{gap:9px;max-width:500px;margin:auto;grid-template-columns:1.2fr 1fr}
+  #frame.portrait-welcome .play-button,#frame.portrait-welcome .install-button{min-height:52px;font-size:17px;padding:8px 10px;gap:6px}#frame.portrait-welcome .play-button svg,#frame.portrait-welcome .install-button svg{width:21px;height:21px}
+  #frame.portrait-welcome .parent-note{text-align:left;margin:18px auto 0;padding:10px 12px;font-size:12px;line-height:1.4}#frame.portrait-welcome .parent-note strong{font-size:13px}
+  #frame.portrait-welcome .bottomline{flex-direction:column;gap:10px;text-align:center;padding-top:0;font-size:14px}#frame.portrait-welcome .bottomline p{font-size:14px;line-height:1.4}
+  #frame.portrait-welcome .footer-actions{width:100%;justify-content:center;gap:8px}#frame.portrait-welcome .about-button{min-height:44px;font-size:13px;padding:8px 12px}
+  #frame.portrait-welcome .dialog-shade{position:fixed;padding:12px}#frame.portrait-welcome .dialog-panel{width:100%;max-width:560px;padding:20px;max-height:100%}#frame.portrait-welcome .dialog-panel h2{font-size:24px}#frame.portrait-welcome .dialog-panel p{font-size:16px}
+  #frame.portrait-welcome .about-dialog{max-height:100%}#frame.portrait-welcome .about-dialog #dialog-title{font-size:22px;padding-right:46px}#frame.portrait-welcome .about-card{padding:14px;font-size:16px}#frame.portrait-welcome .about-card h3{font-size:25px}
+#frame.portrait-welcome.short-welcome .mascot-space{height:100px;max-height:100px;width:180px}#frame.portrait-welcome.short-welcome .sana-says{font-size:11px;left:-20px}#frame.portrait-welcome.short-welcome .tagline{font-size:14px;margin:7px 0 11px}
+/* The opening follows the existing Kids Puzzle splash composition. */
+#frame:not(.portrait-welcome){overflow-y:auto;grid-template-rows:auto minmax(min-content,1fr) auto}#frame:not(.portrait-welcome) .dialog-shade{position:fixed}
+.parent-note{border:1.5px solid #ffd16699;background:#261632ad;box-shadow:inset 0 0 0 1px #ffffff18;color:#fff;font-weight:800}
+.parent-note strong{color:#ffd166;text-align:center;font-size:16px;margin-bottom:10px}.parent-note ol{margin:0;padding-left:20px;line-height:1.55}.parent-note li{padding-left:1px}.parent-note b{color:#ffd166}
+.copy .parent-note{margin-top:15px;margin-bottom:20px}.tagline{color:#5aefa2;font-weight:900;text-shadow:0 2px 6px #182134,0 0 3px #182134}
+.bottomline{gap:12px}.bottomline .about-button{display:flex;align-items:center;justify-content:center;gap:7px;font-size:16px;min-height:48px;font-weight:900;background:#33215f8c;border:1.5px solid #ffffff80}
+.bottomline .share-button{background:#fff7e9;border-color:#fff7e9;color:#483575}
+.compact .parent-note{font-size:12px;padding:10px 13px}.compact .parent-note strong{font-size:14px;margin-bottom:6px}.compact .copy .parent-note{margin-top:10px;margin-bottom:14px}
+#frame.portrait-welcome{gap:10px;grid-template-rows:auto minmax(min-content,1fr) auto}
+#frame.portrait-welcome .topline{gap:6px;font-size:16px}#frame.portrait-welcome .family span{font-size:26px}#frame.portrait-welcome .release-tools{gap:10px}#frame.portrait-welcome .update-button{min-height:40px;font-size:14px}
+#frame.portrait-welcome .hero{gap:8px;max-width:600px}#frame.portrait-welcome .mascot-space{flex:none;width:min(92%,350px);height:clamp(150px,calc(var(--h) * .26),240px);max-height:240px;min-height:0}
+#frame.portrait-welcome .mascot-space{grid-template-rows:minmax(0,1fr)}#frame.portrait-welcome .mascot-art{height:100%;max-height:100%;min-height:0;min-width:0;filter:drop-shadow(0 12px 12px #28133a44)}#frame.portrait-welcome .sana-says{display:none}
+#frame.portrait-welcome h1{font-size:clamp(28px,calc(var(--w) * .085),38px);line-height:1.12;letter-spacing:-1px;color:#fff;text-shadow:0 3px 8px #2d174e99;white-space:nowrap}
+#frame.portrait-welcome h1 span{display:inline;font-size:inherit;color:inherit;letter-spacing:inherit;margin:0}
+#frame.portrait-welcome .tagline{font-size:15px;line-height:1.4;margin:10px 0 16px;color:#5aefa2}
+#frame.portrait-welcome .parent-note{text-align:left;margin:0 auto 20px;padding:12px 15px;font-size:14px;border-radius:15px;line-height:1.5}#frame.portrait-welcome .parent-note strong{font-size:15px;margin-bottom:8px}#frame.portrait-welcome .parent-note ol{padding-left:18px;line-height:1.5}
+#frame.portrait-welcome .actions{gap:9px;max-width:600px;grid-template-columns:1.1fr 1fr}#frame.portrait-welcome .play-button,#frame.portrait-welcome .install-button{min-height:54px;font-size:18px;border-radius:40px}
+#frame.portrait-welcome .bottomline{gap:10px;flex-direction:column-reverse}#frame.portrait-welcome .footer-actions{gap:9px;width:100%;max-width:600px}#frame.portrait-welcome .footer-actions #about{flex:1;background:#33215f8c;color:#fff}#frame.portrait-welcome .footer-actions #share-app{font-size:13px;background:#fff7e9;color:#483575;border-color:#fff7e9}
+#frame.portrait-welcome .bottomline p{font-size:14px;line-height:1.4}#frame.portrait-welcome .about-button{min-height:46px;font-size:16px;padding:8px 14px}
+#frame.portrait-welcome.short-welcome .mascot-space{height:115px;max-height:115px;width:210px}#frame.portrait-welcome.short-welcome .tagline{font-size:14px;margin:7px 0 12px}#frame.portrait-welcome.short-welcome .parent-note{font-size:13px;padding:10px 12px;margin-bottom:14px}#frame.portrait-welcome.short-welcome .parent-note strong{font-size:14px;margin-bottom:6px}#frame.portrait-welcome.short-welcome .play-button,#frame.portrait-welcome.short-welcome .install-button{min-height:50px;font-size:16px}
+/* Rolling die and centred About follow the linked app opening. */
+.welcome-dice-orbit{transform-origin:0 0;animation:welcomeDiceOrbit 6.4s linear infinite}.welcome-dice-face{transform-origin:0 0;animation:welcomeDiceRoll 1.4s ease-in-out infinite}
+.die-pip{opacity:0;animation-duration:2.4s;animation-timing-function:step-end;animation-iteration-count:infinite}.die-corner{animation-name:welcomeDieCorner}.die-four{animation-name:welcomeDieFour}.die-six{animation-name:welcomeDieSix}.die-centre{opacity:1;animation-name:welcomeDieCentre}
+@keyframes welcomeDiceOrbit{to{transform:rotate(360deg)}}@keyframes welcomeDiceRoll{0%,100%{transform:rotate(0)}18%{transform:rotate(-24deg)}34%{transform:rotate(18deg)}50%{transform:rotate(-10deg)}66%{transform:rotate(6deg)}}
+@keyframes welcomeDieCorner{0%{opacity:0}16.667%,100%{opacity:1}}@keyframes welcomeDieFour{0%{opacity:0}50%,100%{opacity:1}}@keyframes welcomeDieSix{0%{opacity:0}83.334%,100%{opacity:1}}@keyframes welcomeDieCentre{0%{opacity:1}16.667%{opacity:0}33.334%{opacity:1}50%{opacity:0}66.667%{opacity:1}83.334%,100%{opacity:0}}
+.release-tools .welcome-share{display:flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;min-height:44px;padding:10px;border:2px solid #fff7e9;border-radius:14px;background:#fff7e9;color:#483575;box-shadow:none}.welcome-share svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+#frame.portrait-welcome .release-tools{gap:8px}#frame.portrait-welcome .release-tools .welcome-share{width:40px;height:40px;min-height:40px;padding:8px}
+#frame.portrait-welcome .footer-actions{justify-content:center}#frame.portrait-welcome .footer-actions #about{flex:0 1 270px;width:100%;min-height:48px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.age-picker{max-width:600px;margin:0 0 14px;padding:10px 13px;border:1.5px solid #fff2b6;border-radius:17px;background:#fff7e9;color:#243f36;text-align:center}.age-picker p{margin:0 0 7px;font-size:13px;font-weight:900;line-height:1.3}.age-choices{display:flex;justify-content:center;gap:8px}.age-choices .age-chip{display:flex;align-items:center;justify-content:center;flex:1;max-width:100px;min-height:44px;border:2px solid #b9cdbd;border-radius:12px;background:#d9efdb;color:#173e35;font-size:20px;font-weight:900}.age-choices .age-chip:nth-child(2){background:#ffe17a}.age-choices .age-chip:nth-child(3){background:#c9e8f3}.age-choices .age-chip:nth-child(4){background:#ffc2a8}.age-choices small{font-size:11px;margin-left:3px}.compact .age-picker{padding:6px 9px;margin-bottom:10px}.compact .age-picker p{font-size:11px;margin-bottom:4px}.compact .age-choices .age-chip{min-height:38px;font-size:18px}#frame.portrait-welcome .age-picker{margin:0 auto 12px;padding:8px 10px}#frame.portrait-welcome .mascot-space{height:clamp(115px,calc(var(--h) * .20),175px);max-height:175px}#frame.portrait-welcome.short-welcome .mascot-space{height:100px;max-height:100px}
+/* Fit the whole opening once; touch gestures must not resize or pan it. */
+#frame{transform:translate(-50%,-50%) scale(var(--welcome-scale,1));overflow:hidden!important}
+
+/* v1.04: smaller SeSe portrait, separated from SaNa's yellow mascot circle. */
+.mascot-space .sese-welcome{position:absolute;z-index:2;left:-5%;right:auto;bottom:0;width:27%;max-height:58%;object-fit:contain;object-position:center bottom;pointer-events:none;filter:drop-shadow(0 5px 5px #3b214a55)}
+.mascot-space .mascot-art{transform:translateX(7%)}
+#frame.portrait-welcome .mascot-space .sese-welcome{left:-3%;right:auto;bottom:0;width:29%;max-height:58%}
+#frame.portrait-welcome .mascot-space .mascot-art{transform:translateX(9%)}
+</style>
+<script>if(!window.sanaTouchGuardReady){for(const type of ['contextmenu','selectstart','dragstart'])document.addEventListener(type,event=>event.preventDefault(),{capture:true});window.sanaTouchGuardReady=true;}</script>
+<script>for(const type of ['touchstart','touchmove'])document.addEventListener(type,event=>{if(event.touches.length>1)event.preventDefault();},{passive:false,capture:true});for(const type of ['gesturestart','gesturechange'])document.addEventListener(type,event=>event.preventDefault(),{passive:false});</script>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="sana-puppy-green-r2-v199-192.png" type="image/png">
+<link rel="apple-touch-icon" href="sana-puppy-green-r2-v199-192.png">
+<link rel="stylesheet" href="share.css">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SaNaToddler">
+<meta name="sana-release" content="sana-little-hands-live-v199-sanatoddler-name">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<main id="frame">
+  <header class="topline"><div class="family"><span aria-hidden="true"><img src="sana-puppy-welcome-circle-v199.png" alt="" style="width:1em;height:1em;object-fit:contain;vertical-align:middle;border-radius:50%"></span> A little world with SaNa</div><div class="release-tools"><span class="preview-tag">Live · <span data-release-version>v1.99</span></span><button class="update-button" id="update-app" type="button" aria-label="Update app" aria-busy="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7V3M20 7H16M20 7A8 8 0 1 0 21 14"/></svg><span data-update-label>Update app</span></button><button class="welcome-share" id="share-app" type="button" aria-label="Share app"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="4" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="20" r="3"/><path d="M9 10L15 6M9 14L15 18"/></svg></button></div></header>
+  <section class="hero" aria-labelledby="welcome-title">
+    <div class="mascot-space">
+      <p class="sana-says">Hello, little explorer!</p>
+      <img class="sese-welcome" src="sese-enhanced-v89.png" alt="SeSe and sibling" decoding="async"/><svg class="mascot-art" viewBox="0 0 460 390" role="img" aria-label="SaNa the puppy with a die and colourful play shapes">
+        <defs><linearGradient id="sun" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#ffeaa0"/><stop offset="1" stop-color="#ffbf36"/></linearGradient><clipPath id="sana-welcome-circle"><circle cx="231" cy="194" r="136"/></clipPath></defs>
+        <ellipse cx="226" cy="354" rx="134" ry="19" fill="#382262" opacity=".22"/>
+        <g class="mascot-float">
+          <image data-sana-puppy="true" href="sana-puppy-welcome-circle-v199.png" x="95" y="58" width="272" height="272" preserveAspectRatio="xMidYMid meet" clip-path="url(#sana-welcome-circle)"/>
+          <g transform="translate(231 194)"><g class="welcome-dice-orbit"><g transform="translate(-158 0) scale(.65)"><g class="welcome-dice-face">
+            <rect x="-44" y="-39" width="88" height="88" rx="22" fill="#50306e" opacity=".55"/><rect x="-44" y="-44" width="88" height="88" rx="22" fill="#fff9e6" stroke="#fff" stroke-width="3"/>
+            <g fill="#2e2208"><circle class="die-pip die-corner" cx="-20" cy="-20" r="6"/><circle class="die-pip die-corner" cx="20" cy="20" r="6"/><circle class="die-pip die-four" cx="20" cy="-20" r="6"/><circle class="die-pip die-four" cx="-20" cy="20" r="6"/><circle class="die-pip die-six" cx="-20" cy="0" r="6"/><circle class="die-pip die-six" cx="20" cy="0" r="6"/><circle class="die-pip die-centre" cx="0" cy="0" r="6" fill="#e23b4a"/></g>
+          </g></g></g></g>
+          <path d="M357 267L385 321H328Z" fill="#4bdef0" stroke="#b0f8ff" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="357" cy="102" r="23" fill="#fd8dbd" stroke="#ffd5e7" stroke-width="4"/>
+        </g>
+        <path d="M98 89L102 101L115 105L102 109L98 121L94 109L81 105L94 101Z" fill="#ffe17b"/>
+        <path d="M385 195L388 203L397 206L388 209L385 217L382 209L373 206L382 203Z" fill="#b5f6ee"/>
+        <circle cx="140" cy="333" r="5" fill="#ffe49c"/>
+      </svg>
+    </div>
+    <div class="copy">
+      <h1 id="welcome-title"><span>SaNa</span> Little Hands</h1>
+      <p class="tagline">Count, tap, drag, slide and paint.<br>Little fingers, happy discoveries.</p>
+      <section class="age-picker" aria-label="Parent starting age"><p>Starting sets for ages 2–5.<br>Every game stays open. Play together.</p><div class="age-choices"><span class="age-chip" data-age="2">2<small>years</small></span><span class="age-chip" data-age="3">3<small>years</small></span><span class="age-chip" data-age="4">4<small>years</small></span><span class="age-chip" data-age="5">5<small>years</small></span></div></section>
+      <aside class="parent-note" aria-label="Before you play, health first"><strong>🛡️ Before you play — health first</strong><ol><li>Keep <b>brightness low</b>. Use Night Mode after dark.</li><li><b>Take short breaks</b> often.</li><li><b>Play with a parent or guardian</b> nearby.</li></ol></aside>
+      <div class="actions">
+        <a class="play-button" id="play" href="play.html?v160"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3L21 12L5 21Z"/></svg>Tap to play</a>
+        <button class="install-button" id="install" type="button"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3V18M8 12L14 18L20 12M4 19V24H24V19"/></svg><span data-install-label>Install app</span></button>
+      </div>
+    </div>
+  </section>
+  <footer class="bottomline"><p>Starting sets for ages 2–5 · Choose freely<br><span id="offline-status" role="status">Preparing offline play…</span></p><div class="footer-actions"><button class="about-button" type="button" id="about">About this project</button></div></footer>
+  <div class="dialog-shade" id="dialog-shade" hidden>
+    <section class="dialog-panel" id="dialog-panel" role="dialog" aria-modal="true" aria-labelledby="dialog-title" tabindex="-1">
+      <h2 id="dialog-title"></h2><div id="dialog-copy"></div><button id="close-dialog" type="button">Got it</button>
+    </section>
+  </div>
+</main>
+<script src="age-profiles.js"></script>
+<script>
+(() => {
+  const frame=document.getElementById('frame');
+  const ageProfiles=window.SaNaProfiles;
+  document.getElementById('play').href=ageProfiles.navigation(document.getElementById('play').getAttribute('href'));
+  if(!window.sanaTouchGuardReady){for(const type of ['contextmenu','selectstart','dragstart'])document.addEventListener(type,event=>event.preventDefault(),{capture:true});window.sanaTouchGuardReady=true;}
+  try{screen.orientation?.unlock?.();}catch{}
+  function fit(){
+    const viewport=window.visualViewport;
+    if(viewport&&Math.abs(viewport.scale-1)>.01)return;
+    const width=Math.min(viewport?.width||innerWidth,innerWidth),height=Math.min(viewport?.height||innerHeight,innerHeight),w=width,h=height;
+    frame.classList.toggle('portrait-welcome',height>width);frame.classList.remove('portrait-rotated');frame.classList.toggle('short-welcome',h<700);
+    frame.style.setProperty('--w',w+'px');frame.style.setProperty('--h',h+'px');
+    frame.style.paddingLeft='';frame.style.paddingRight='';
+    frame.style.left=((viewport?.offsetLeft||0)+width/2)+'px';frame.style.top=((viewport?.offsetTop||0)+height/2)+'px';
+    frame.classList.toggle('compact',h<580);frame.classList.toggle('small',w<730||h<350);
+    let scale=1;frame.style.setProperty('--welcome-scale','1');
+    // Short screens use a single fitted composition, without scrolling to Play.
+    for(let pass=0;pass<4;pass++){
+      const overflow=frame.scrollHeight/frame.clientHeight;if(overflow<=1.002)break;
+      scale/=overflow;frame.style.setProperty('--w',w/scale+'px');frame.style.setProperty('--h',h/scale+'px');frame.style.setProperty('--welcome-scale',String(scale));
+    }
+  }
+  fit();window.addEventListener('resize',fit);window.visualViewport?.addEventListener('resize',fit);window.addEventListener('pageshow',event=>{if(event.persisted){fit();}});window.addEventListener('orientationchange',fit);
+  const shade=document.getElementById('dialog-shade'),panel=document.getElementById('dialog-panel');
+  let opener;
+  function show(title,copy,source){const about=source?.id==='about';panel.classList.toggle('about-dialog',about);const closeButton=document.getElementById('close-dialog');closeButton.textContent=about?'×':'Got it';closeButton.setAttribute('aria-label',about?'Close About':'Got it');opener=source;document.getElementById('dialog-title').textContent=title;document.getElementById('dialog-copy').innerHTML=copy;shade.hidden=false;panel.focus();}
+  function close(){shade.hidden=true;opener?.focus();}
+  document.getElementById('about').addEventListener('click',event=>show('📜 About this project',`
+    <section class="about-card"><h3>🐒 SaNaToddler</h3><p>Kids Puzzle Library · starting sets for ages 2–5</p><p class="about-quote">“Little hands, happy discoveries.”</p><p>Grown-ups can choose any age and any sub-level. These are starting settings, never ability grades. Every game stays open for shared play.</p><p>Drag and match shapes · Pop plain, number, letter and shape bubbles, with full 1–20 and A–Z sets always available · Slide to find friends · Brush clean and finger paint · Count abacus beads to colour a rainbow and circle · Make a Picture Puzzle with a picture from your device, with 2×2, 3×3, 4×4 and 5×5 grids</p><p>Easy · Medium · Challenge</p><p>No ads, accounts or trackers. Optional sound and offline play after the first online load.</p></section>
+    <section class="about-card safety">🛡️ Low brightness · short breaks · play with a parent</section>
+    <section class="about-card">Created by G.RajaPathamuthu · Kids Puzzle Library<br>Guided by : JNT<br>Code Coordinated by : AI-Assistances<br><i>(What we get is all we ask for.)</i><p>Found something odd? Send us your feedback.<br>Mail To : <a href="mailto:grajapm@gmail.com?subject=SaNa%20Little%20Hands%20Feedback%20%26%20Suggestion">✉️ Feedback &amp; Suggestion</a></p><span class="about-version">App <span data-app-version>Live v1.99</span></span></section>`,event.currentTarget));
+  document.getElementById('close-dialog').addEventListener('click',close);
+  shade.addEventListener('click',event=>{if(event.target===shade)close();});
+  document.addEventListener('keydown',event=>{
+    if(shade.hidden)return;
+    if(event.key==='Escape'){event.preventDefault();close();}
+    if(event.key==='Tab'){
+      const controls=[...panel.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(el=>el.getClientRects().length);
+      const first=controls[0],last=controls.at(-1);
+      if(event.shiftKey&&(document.activeElement===first||document.activeElement===panel)){event.preventDefault();last?.focus();}
+      else if(!event.shiftKey&&(document.activeElement===last||document.activeElement===panel)){event.preventDefault();first?.focus();}
+    }
+  });
+  window.sanaInstallDialog=(title,copy)=>show(title,copy,document.getElementById('install'));
+  window.sanaAppDialog=(title,copy,source)=>show(title,copy,source);
+})();
+</script>
+<script src="pwa.js?v199-live"></script>
+<script src="share.js"></script>
+</body>
+</html>

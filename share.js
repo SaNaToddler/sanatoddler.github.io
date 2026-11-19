@@ -1,0 +1,47 @@
+(() => {
+  const button=document.getElementById('share-app');
+  if(!button)return;
+  const url='https://kidsmathsmatrixpuzzle.github.io/toddler-games-/index.html';
+  const whatsapp=new URL('https://wa.me/');
+  whatsapp.searchParams.set('text',url);
+  function nativeShareData(){
+    if(typeof navigator.share!=='function')return null;
+    const data={url};
+    if(typeof navigator.canShare!=='function')return data;
+    try{
+      if(navigator.canShare(data))return data;
+    }catch{/* Unsupported or blocked native sharing uses the visible link options. */}
+    return null;
+  }
+  button.addEventListener('click',()=>{
+    const nativeData=nativeShareData();
+    const message=nativeData?'Choose where to invite your group to play SaNa.':'Device sharing is unavailable here. Use WhatsApp or Copy link.';
+    window.sanaAppDialog?.('Share SaNaToddler',`<div class="share-options"><a class="share-option whatsapp" href="${whatsapp.href}" target="_blank" rel="noopener noreferrer">WhatsApp</a><button class="share-option" type="button" id="copy-share-link">Copy link</button>${nativeData?'<button class="share-option more" type="button" id="native-share">More apps</button>':''}</div><label class="share-link">App link<input type="text" value="${url}" readonly inputmode="none"></label><p class="share-result" id="share-result" role="status">${message}</p>`,button);
+    const result=document.getElementById('share-result');
+    const link=document.querySelector('.share-link input');
+    document.getElementById('copy-share-link')?.addEventListener('click',async event=>{
+      const copyButton=event.currentTarget;
+      try{
+        if(typeof navigator.clipboard?.writeText!=='function')throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(url);
+        result.textContent='Link copied. Paste it into your group.';
+      }catch{
+        link.focus({preventScroll:true});link.select();link.setSelectionRange(0,url.length);
+        // Compatibility fallback only: older/embedded browsers may block Async Clipboard.
+        let copied=false;
+        try{copied=document.execCommand?.('copy')===true;}catch{/* Explicit sharing options remain available. */}
+        result.textContent=copied?'Link copied. Paste it into your group.':'Copy is unavailable here. Use WhatsApp to share the link.';
+        link.setSelectionRange(0,0);window.getSelection()?.removeAllRanges();copyButton.focus({preventScroll:true});
+      }
+    });
+    document.getElementById('native-share')?.addEventListener('click',async event=>{
+      const more=event.currentTarget;more.disabled=true;
+      try{
+        await navigator.share(nativeData);
+        result.textContent='You can also copy the link for your group.';
+      }catch(error){
+        result.textContent=error?.name==='AbortError'?'Sharing cancelled or no sharing app is available. Copy the link instead.':error?.name==='NotAllowedError'?'Device sharing is blocked here. Open this link in Chrome or Safari.':'Could not open device sharing. Use Copy link or WhatsApp.';
+      }finally{more.disabled=false;}
+    });
+  });
+})();
