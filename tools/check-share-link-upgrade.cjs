@@ -1,0 +1,42 @@
+// Real old-worker -> new-worker update; no Android installation emulation.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
+const {chromium,expect}=require(process.env.MM_PLAYWRIGHT||'@playwright/test');
+const current=path.resolve(__dirname,'..'),previous=process.env.SANA_PREVIOUS_RELEASE;
+assert(previous,'Set SANA_PREVIOUS_RELEASE to the unchanged org-r1 checkout');
+const oldRelease='sana-toddler-public-v199-org-r1',newRelease='sana-toddler-public-v199-share-r2';
+let upgraded=false,browser,context;const checks=[];
+const check=(name,value)=>{assert(value,name);checks.push(name);console.log('PASS '+name);};
+const server=http.createServer((req,res)=>{try{
+ const url=new URL(req.url,'http://local'),root=upgraded?current:path.resolve(previous),file=path.resolve(root,'.'+(url.pathname==='/'?'/index.html':decodeURIComponent(url.pathname)));
+ assert(file.startsWith(root+path.sep));
+ const type=({'.html':'text/html','.js':'text/javascript','.css':'text/css','.webmanifest':'application/manifest+json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.mp3':'audio/mpeg','.jpg':'image/jpeg'})[path.extname(file)]||'application/octet-stream';
+ res.writeHead(200,{'Content-Type':type,'Cache-Control':'no-store'}).end(fs.readFileSync(file));
+}catch{res.writeHead(404).end();}});
+(async()=>{
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const origin='http://127.0.0.1:'+server.address().port;
+ browser=await chromium.launch();context=await browser.newContext({viewport:{width:393,height:852},permissions:['clipboard-read','clipboard-write']});
+ const page=await context.newPage();page.setDefaultTimeout(15000);const errors=[];page.on('pageerror',error=>errors.push(error.message));
+ await page.goto(origin+'/');await expect(page.locator('#offline-status')).toHaveText('Ready for offline play',{timeout:45000});
+ check('Upgrade starts on the previously published release',await page.locator('meta[name="sana-release"]').getAttribute('content')===oldRelease);
+ await page.getByRole('button',{name:'Share app',exact:true}).click();
+ check('Old installation initially shares the root address',await page.locator('.share-link input').inputValue()==='https://sanatoddler.github.io/');
+ await page.getByRole('button',{name:'Got it',exact:true}).click();
+ await page.evaluate(async()=>{localStorage.setItem('sana-share-upgrade-test','keep');await caches.open('unrelated-preservation-test');});
+ await page.locator('#play').click();await page.locator('[data-activity="puzzle"]').click();await page.locator('#puzzle-file').setInputFiles(path.join(current,'sana-puppy-green-r2-v199-192.png'));await expect(page.locator('[data-puzzle-choice]')).toHaveCount(2);
+ await page.goto(origin+'/index.html');upgraded=true;await page.locator('#update-app').click();
+ await page.waitForFunction(expected=>document.querySelector('meta[name="sana-release"]')?.content===expected,newRelease,{timeout:45000});
+ await expect(page.locator('#offline-status')).toHaveText('Ready for offline play',{timeout:30000});
+ const state=await page.evaluate(async()=>({keys:await caches.keys(),saved:localStorage.getItem('sana-share-upgrade-test')}));
+ check('Update activates the new complete cache and removes only its old release',state.keys.includes(newRelease)&&!state.keys.includes(oldRelease)&&state.keys.includes('unrelated-preservation-test'));
+ check('Saved settings survive the cached update',state.saved==='keep');
+ const dialog=page.getByRole('dialog');if(await dialog.isVisible())await page.getByRole('button',{name:'Got it',exact:true}).click();
+ await page.getByRole('button',{name:'Share app',exact:true}).click();
+ check('Updated installation shares the tested large-preview address',await page.locator('.share-link input').inputValue()==='https://sanatoddler.github.io/index.html');
+ await page.getByRole('button',{name:'Copy link',exact:true}).click();await expect(page.locator('#share-result')).toContainText('Link copied');
+ check('Updated clipboard uses the tested large-preview address',await page.evaluate(()=>navigator.clipboard.readText())==='https://sanatoddler.github.io/index.html');
+ await page.getByRole('button',{name:'Got it',exact:true}).click();await page.locator('#play').click();await page.locator('[data-activity="puzzle"]').click();await expect(page.locator('[data-puzzle-choice]')).toHaveCount(2);
+ await context.setOffline(true);await page.reload();await page.locator('[data-activity="puzzle"]').click();await expect(page.locator('[data-puzzle-choice]')).toHaveCount(2);
+ check('Saved picture survives the upgrade and subsequent offline reload',true);check('Upgrade causes no uncaught script errors',errors.length===0);
+ const output=path.join(current,'artifacts/share-preview');fs.mkdirSync(output,{recursive:true});fs.writeFileSync(path.join(output,'upgrade-results.json'),JSON.stringify({checks:checks.length,results:checks,errors},null,2));
+ console.log(JSON.stringify({checks:checks.length,failed:0,from:oldRelease,to:newRelease}));
+})().catch(error=>{console.error(error.stack);process.exitCode=1;}).finally(async()=>{await context?.close();await browser?.close();server.closeAllConnections();server.close();});

@@ -1,6 +1,6 @@
 # SaNaToddler
 
-Toddler games for ages 2–5. The approved public Main app is published from this repository at **https://sanatoddler.github.io/** once GitHub Pages is enabled.
+Toddler games for ages 2–5. Open and share the approved public Main app at **https://sanatoddler.github.io/index.html**.
 
 Open the link in your browser, install the app if offered, then tap to play. The installed app is named **SaNaToddler**, with the green puppy icon.
 

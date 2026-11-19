@@ -1,9 +1,10 @@
 # SaNaToddler independent public Main v1.99
 
 - Target repository: `SaNaToddler/sanatoddler.github.io`.
-- Public and in-app share address: `https://sanatoddler.github.io/`.
+- Public app origin: `https://sanatoddler.github.io/`.
+- In-app share address: `https://sanatoddler.github.io/index.html` (the user confirmed the large puppy WhatsApp preview for this address).
 - Approved source: `KidsMathsMatrixPuzzle/toddler-games-` commit `e2f6d634004f9a5ab8b17788a93a67b257e846ae`.
-- Visible version: v1.99; release/cache key: `sana-toddler-public-v199-org-r1`.
+- Visible version: v1.99; release/cache key: `sana-toddler-public-v199-share-r2`.
 - Manifest identity: `/`; scope: `./`; start URL: `./index.html`; name/short name: `SaNaToddler`.
 - Artwork, icons and gameplay are retained from approved Main. Only site identity, share/preview URLs, release markers, recovery helpers and generated worker digests change.
 

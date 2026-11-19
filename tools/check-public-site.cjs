@@ -1,7 +1,7 @@
 // Verify the independent public site. Native share payload checks do not emulate Android installation.
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http'),crypto=require('node:crypto');
 const {chromium,webkit,expect}=require(process.env.MM_PLAYWRIGHT||'@playwright/test');
-const root=path.resolve(__dirname,'..'),publicURL='https://sanatoddler.github.io/',release='sana-toddler-public-v199-org-r1';
+const root=path.resolve(__dirname,'..'),publicURL='https://sanatoddler.github.io/',shareURL=publicURL+'index.html',release='sana-toddler-public-v199-share-r2';
 const engine=process.argv.includes('--webkit')?'webkit':'chromium',shareOnly=process.argv.includes('--share-only');
 const results=[],errors=[];let browser,context,serverUnavailable=false;
 const check=(name,pass)=>{assert(pass,name);results.push(name);console.log('PASS '+name);};
@@ -27,13 +27,13 @@ const server=http.createServer((req,res)=>{
  const page=await context.newPage();page.setDefaultTimeout(15000);page.on('pageerror',error=>errors.push(error.message));
  await page.goto(origin+'/');
  await page.getByRole('button',{name:'Share app',exact:true}).click();
- check('Visible share link uses only the branded public address',await page.locator('.share-link input').inputValue()===publicURL);
- check('WhatsApp invitation uses the branded address',new URL(await page.getByRole('link',{name:'WhatsApp',exact:true}).getAttribute('href')).searchParams.get('text')===publicURL);
+ check('Visible share link uses only the branded public address',await page.locator('.share-link input').inputValue()===shareURL);
+ check('WhatsApp invitation uses the branded address',new URL(await page.getByRole('link',{name:'WhatsApp',exact:true}).getAttribute('href')).searchParams.get('text')===shareURL);
  await page.getByRole('button',{name:'Copy link',exact:true}).click();
  await expect(page.locator('#share-result')).toContainText('Link copied');
- if(engine==='chromium')check('Actual browser clipboard contains the public address',await page.evaluate(()=>navigator.clipboard.readText())===publicURL);
+ if(engine==='chromium')check('Actual browser clipboard contains the public address',await page.evaluate(()=>navigator.clipboard.readText())===shareURL);
  await page.getByRole('button',{name:'More apps',exact:true}).click();
- check('Native-share payload construction uses the branded address',await page.evaluate(url=>window.__sharedPayloads.length===1&&window.__sharedPayloads[0].url===url,publicURL));
+ check('Native-share payload construction uses the branded address',await page.evaluate(url=>window.__sharedPayloads.length===1&&window.__sharedPayloads[0].url===url,shareURL));
  await page.getByRole('button',{name:'Got it',exact:true}).click();
  if(shareOnly)return;
 
@@ -81,6 +81,17 @@ const server=http.createServer((req,res)=>{
  await page.setViewportSize({width:1280,height:800});await page.screenshot({path:path.join(artifacts,engine+'-tablet-welcome.png'),fullPage:true});await page.setViewportSize({width:393,height:852});
  await page.locator('#update-app').click();await expect(page.getByRole('dialog')).toContainText('up to date');await page.getByRole('button',{name:'Got it',exact:true}).click();
  check('Update recognizes the complete independent release',await page.locator('#update-app').isEnabled());
+ async function verifyRecovery(){
+  await page.goto(origin+'/install-sanatoddler-v1.99.html');
+  try{await page.waitForURL(origin+'/index.html',{timeout:30000});}catch(error){
+   console.error('Recovery state:',await page.evaluate(()=>({url:location.href,status:document.querySelector('#progress')?.textContent,retryHidden:document.querySelector('#retry')?.hidden})));
+   throw error;
+  }
+  check('Recovery helper reaches the independent app without a checking loop',true);
+ }
+ // Test WebKit recovery before refusing HTTP connections: its worker registration
+ // can stall after that artificial outage, including on the untouched org-r1 release.
+ if(engine==='webkit')await verifyRecovery();
  await page.locator('#play').click();await page.locator('[data-activity="puzzle"]').click();
  await page.locator('#puzzle-file').setInputFiles(path.join(root,'sana-puppy-green-r2-v199-192.png'));await expect(page.locator('[data-puzzle-choice]')).toHaveCount(2);
  // Windows WebKit's offline emulation also fails on the untouched approved app.
@@ -92,12 +103,8 @@ const server=http.createServer((req,res)=>{
  check('Approved Machines artwork opens with '+(engine==='webkit'?'server unavailable':'the browser offline'),await page.locator('#glossy-look-image').evaluate(async image=>{await image.decode();return image.naturalWidth>0;}));
  await page.goto(origin+'/');await expect(page.locator('#play')).toBeVisible();
  check('Canonical root welcome opens with '+(engine==='webkit'?'server unavailable':'the browser offline'),true);
- serverUnavailable=false;await context.setOffline(false);await page.goto(origin+'/install-sanatoddler-v1.99.html');
- try{await page.waitForURL(origin+'/index.html',{timeout:30000});}catch(error){
-  console.error('Recovery state:',await page.evaluate(()=>({url:location.href,status:document.querySelector('#progress')?.textContent,retryHidden:document.querySelector('#retry')?.hidden})));
-  throw error;
- }
- check('Recovery helper reaches the independent app without a checking loop',true);
+ serverUnavailable=false;await context.setOffline(false);
+ if(engine==='chromium')await verifyRecovery();
  check('Browser reports no uncaught script errors',errors.length===0);
  fs.writeFileSync(path.join(artifacts,engine+'-results.json'),JSON.stringify({engine,checks:results.length,errors,results},null,2));
 })().then(()=>console.log(JSON.stringify({engine,checks:results.length,failed:0,shareOnly}))).catch(error=>{console.error(error.stack);process.exitCode=1;}).finally(async()=>{await context?.close();await browser?.close();server.closeAllConnections();server.close();});
